@@ -27,7 +27,7 @@ attributes_range = Import_Data.find_range_of_data(train_set, attribute_informati
 Data_split_train_test_seed = random.randint(1, 10 ** 5)
 global_seed = random.randint(1, 10 ** 5)
 seed_common = random.randint(1, 10 ** 5)
-number_of_parties = 10  # 80
+number_of_parties = 1  # 80
 number_of_trees = 25
 
 # What proportion of parties participate in selecting the best candidate decision node/leaf:
