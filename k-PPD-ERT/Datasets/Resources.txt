@@ -1,0 +1,4 @@
+https://archive.ics.uci.edu/ml/datasets/Multiple+Features
+https://archive.ics.uci.edu/ml/datasets/nursery
+http://archive.ics.uci.edu/ml/datasets/Adult
+https://archive.ics.uci.edu/ml/datasets/Waveform+Database+Generator+%28Version+1%29
