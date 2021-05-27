@@ -156,7 +156,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Main_ Simulation_PPD_ERT.py" />
+      <option name="SCRIPT_NAME" value="C:\Amin\Workplace\GitHub\k-ppd-ert\k-PPD-ERT\Main_ Simulation_k_PPD_ERT.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -252,7 +252,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1595819903643</updated>
-      <workItem from="1621800081397" duration="10775000" />
+      <workItem from="1621800081397" duration="10954000" />
     </task>
     <task id="LOCAL-00001" summary="pycharm commit&#10;change dataset and num of parties">
       <created>1621810966097</created>
@@ -303,7 +303,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622127814645</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="pycharm commit&#10;change dataset and num of parties">
+      <created>1622136079267</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1622136079267</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -337,7 +344,7 @@
     <option name="LAST_COMMIT_MESSAGE" value="pycharm commit&#10;change dataset and num of parties" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/k_PPD_ERT$Main__Simulation_PPD_ERT.coverage" NAME="Main_ Simulation_PPD_ERT Coverage Results" MODIFIED="1622127763267" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/k_PPD_ERT$Main__Simulation_PPD_ERT.coverage" NAME="Main_ Simulation_PPD_ERT Coverage Results" MODIFIED="1622136073131" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/backup_main.py" />
