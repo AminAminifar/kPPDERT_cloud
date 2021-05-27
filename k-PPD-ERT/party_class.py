@@ -187,3 +187,6 @@ class Party:
                 else:
                     false_set_indices.append(index)
         self.data_table.append(([node_id + 1], true_set_indices, false_set_indices))
+
+    def reset_party(self):
+        self.data_table = []

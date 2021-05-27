@@ -1,5 +1,5 @@
 ========================================== 
-Date and Time: 11/11/2020 16:36:35
+Date and Time: 24/05/2021 01:03:02
 ========================================== 
 Data set Information: 
 Data set: Waveform
@@ -11,22 +11,22 @@ attributes_range: [[-3.34, 3.94], [-3.25, 3.88], [-4.05, 4.65], [-2.79, 5.66], [
 Test set Proportion to Data Size: 0.3334
 ========================================== 
 Run Parameters: 
-Initial_seed: 91565
-Number of data holder parties: 10
-Data_split_train_test_seed: 22653
-global_seed: 65842
+Initial_seed: 33905
+Number of data holder parties: 1
+Data_split_train_test_seed: 97415
+global_seed: 1024
 attribute_percentage: 0.2
 number_of_trees: 25
-min_num_parties: 10
+min_num_parties: 1
 step_size: 10
 Secure_Aggregation_SMC: 1
-Secure_Aggregation_Parameter_k: 6
+Secure_Aggregation_Parameter_k: 0
 proportion_of_collaborating_parties: 0.7
 ========================================== 
 Run Results: 
-party_num: [10.]
-F1 Score: [0.84713594]
-Accuracy: [0.84883023]
-GMean: [0.84527991]
-Learning Time: [1747.8460691]
+party_num: [1.]
+F1 Score: [0.84851656]
+Accuracy: [0.85062987]
+GMean: [0.845699]
+Learning Time: [413.7439346]
 ========================================== 
