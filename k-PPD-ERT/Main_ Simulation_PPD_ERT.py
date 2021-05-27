@@ -54,15 +54,9 @@ Secure_Aggregation_Parameter_k = num_participating_parties-1  # can be changed t
 # Or set manually. We already conducted model selection,
 # the following are the results:
 # Adult: .9, Waveform: .2,Nursery: .9, Multiple features: .1
-if Data_Set == "Adult":
-    best_val = .9
-elif Data_Set == "Waveform":
-    best_val = .2
-elif Data_Set == "Nursery":
-    best_val = .9
-elif Data_Set == "mfeat":
-    best_val = .1
-attribute_percentage = best_val
+
+attribute_percentage = np.around(np.sqrt(len(attribute_information)) / len(attribute_information), decimals=3)
+
 
 min_num_parties = number_of_parties  # 1, 5, 10, 20, 40, 80
 max_num_parties = number_of_parties+1

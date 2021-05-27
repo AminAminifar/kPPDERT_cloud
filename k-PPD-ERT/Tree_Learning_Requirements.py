@@ -103,7 +103,7 @@ class Tree_Learning_Requirements:
         #  percentage of attributes randomely selected
         att_perc = self.att_perc#.7 #.5
         #  number of attributes randomely selected
-        num_rnd_att = round(att_perc * num_att)
+        num_rnd_att = np.int(round(att_perc * num_att))
         # indeces of randomly selected attributes
         rand_attribute_index = [random.randint(0, num_att - 1) for p in range(0, num_rnd_att)]
 
