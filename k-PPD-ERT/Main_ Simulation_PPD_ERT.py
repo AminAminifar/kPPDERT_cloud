@@ -54,7 +54,7 @@ Secure_Aggregation_Parameter_k = num_participating_parties-1  # can be changed t
 # Or set manually. We already conducted model selection,
 # the following are the results:
 # Adult: .9, Waveform: .2,Nursery: .9, Multiple features: .1
-
+# default value:
 attribute_percentage = np.around(np.sqrt(len(attribute_information)) / len(attribute_information), decimals=3)
 
 
