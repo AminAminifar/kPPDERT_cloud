@@ -65,6 +65,10 @@ class interface:
                                       ssp_self=party.ToolsForkPPDERT.SSP_self,
                                       ssa_self=party.ToolsForkPPDERT.SSA_self)
 
+    def parties_reset(self):
+        for party in self.parties:
+            party.reset_party()
+
     def my_print(self):
         for party in self.parties:
             print("====================")

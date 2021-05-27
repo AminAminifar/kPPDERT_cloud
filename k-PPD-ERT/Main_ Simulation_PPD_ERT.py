@@ -107,7 +107,8 @@ for num_parties in range(min_num_parties, max_num_parties, step_size):
                                  parties_update_func=Interface.parties_update,
                                  attribute_percentage=attribute_percentage,
                                  included_parties_indices=included_parties_indices,
-                                 Secure_Aggregation_SMC=Secure_Aggregation_SMC)
+                                 Secure_Aggregation_SMC=Secure_Aggregation_SMC,
+                                 parties_reset_func=Interface.parties_reset)
 
     print("========================================")
     print("LEARNING...")
