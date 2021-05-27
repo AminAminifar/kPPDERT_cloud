@@ -8,6 +8,7 @@ import random
 import timeit
 from datetime import datetime
 import model_selection
+from sklearn.metrics import f1_score, accuracy_score, confusion_matrix, matthews_corrcoef
 
 Initial_seed = random.randint(1, 10 ** 5)
 random.seed(Initial_seed)
@@ -58,79 +59,77 @@ Secure_Aggregation_Parameter_k = num_participating_parties-1  # can be changed t
 attribute_percentage = np.around(np.sqrt(len(attribute_information)) / len(attribute_information), decimals=3)
 
 
-min_num_parties = number_of_parties  # 1, 5, 10, 20, 40, 80
-max_num_parties = number_of_parties+1
-step_size = 10
-
-party_num_list = []
-f1score_list = []
-accuracy_list = []
-GMean_list = []
-time_list = []
-# to calculate for different number of participating parties
-for num_parties in range(min_num_parties, max_num_parties, step_size):
-
-    parties_all = generate_parties.generate(global_seed=global_seed, number_of_parties=number_of_parties,
-                                            train_set=train_set,
-                                            attribute_information=attribute_information,
-                                            number_target_classes=number_target_classes,
-                                            attributes_range=attributes_range,
-                                            attribute_percentage=attribute_percentage,
-                                            Secure_Aggregation_SMC=Secure_Aggregation_SMC,
-                                            Secure_Aggregation_Parameter_k=Secure_Aggregation_Parameter_k,
-                                            seed_common=seed_common,
-                                            num_participating_parties=num_participating_parties,
-                                            Data_split_train_test_seed=Data_split_train_test_seed)
-
-    included_parties_indices = np.array(range(0,num_parties))
-    parties = parties_all[0:num_parties]
-
-    # instantiate Interface class for communications between server and parties
-    Interface = Server_Parties_Interface.interface(parties, proportion_of_collaborating_parties, number_of_parties)
-
-    # initialization
-    if Secure_Aggregation_SMC:
-        Interface.initialize_parties()
-        print("Initialization Done!")
-
-    # instantiate server
-    server = server_class.server(global_seed=global_seed, attribute_range=attributes_range,
-                                 attribute_info=attribute_information,
-                                 num_target_classes=number_target_classes,
-                                 aggregator_func=Interface.aggregator,
-                                 parties_update_func=Interface.parties_update,
-                                 attribute_percentage=attribute_percentage,
-                                 included_parties_indices=included_parties_indices,
-                                 Secure_Aggregation_SMC=Secure_Aggregation_SMC,
-                                 parties_reset_func=Interface.parties_reset)
-
-    print("========================================")
-    print("LEARNING...")
-    start = timeit.default_timer()
-    list_of_trees = server.make_tree_group(impurity_measure='entropy', num_of_trees=number_of_trees)
-    stop = timeit.default_timer()
-    print("A Group of ", number_of_trees, "Trees are Learned!")
-    print("Elapsed Time: ", stop-start, " Sec")
-    print("========================================")
-    print("CLASSIFICATION PERFORMANCE...")
-
-    F1_result = Prediction_and_Classification_Performance.ensemble_f1_score_for_a_set(list_of_trees, test_set)
-    Accuracy_result = Prediction_and_Classification_Performance.ensemble_accuracy_for_a_set(list_of_trees, test_set)
-    GMean_result = Prediction_and_Classification_Performance.ensemble_GMean_for_a_set(list_of_trees, test_set)
-    print("Classification performance of the learned model, (F1 score/F1 score macro):", F1_result, "Accuracy:",
-          Accuracy_result, "GMean:", GMean_result)
-
-    party_num_list.append(num_parties)
-    f1score_list.append(F1_result)
-    accuracy_list.append(Accuracy_result)
-    GMean_list.append(GMean_result)
-    time_list.append(stop-start)
 
 
-result_matrix = np.zeros((5,len(party_num_list)))
-result_matrix[0, :] = np.array(party_num_list)
-result_matrix[1, :] = np.array(f1score_list)
-result_matrix[2, :] = np.array(accuracy_list)
-result_matrix[3, :] = np.array(GMean_list)
-result_matrix[4, :] = np.array(time_list)
+groundTruth = []
+prediction_list_kPPDERT = []
+
+parties_all = generate_parties.generate(global_seed=global_seed, number_of_parties=number_of_parties,
+                                        train_set=train_set,
+                                        attribute_information=attribute_information,
+                                        number_target_classes=number_target_classes,
+                                        attributes_range=attributes_range,
+                                        attribute_percentage=attribute_percentage,
+                                        Secure_Aggregation_SMC=Secure_Aggregation_SMC,
+                                        Secure_Aggregation_Parameter_k=Secure_Aggregation_Parameter_k,
+                                        seed_common=seed_common,
+                                        num_participating_parties=num_participating_parties,
+                                        Data_split_train_test_seed=Data_split_train_test_seed)
+
+included_parties_indices = np.array(range(0,number_of_parties))
+parties = parties_all[0:number_of_parties]
+
+# instantiate Interface class for communications between server and parties
+Interface = Server_Parties_Interface.interface(parties, proportion_of_collaborating_parties, number_of_parties)
+
+# initialization
+if Secure_Aggregation_SMC:
+    Interface.initialize_parties()
+    print("Initialization Done!")
+
+# instantiate server
+server = server_class.server(global_seed=global_seed, attribute_range=attributes_range,
+                             attribute_info=attribute_information,
+                             num_target_classes=number_target_classes,
+                             aggregator_func=Interface.aggregator,
+                             parties_update_func=Interface.parties_update,
+                             attribute_percentage=attribute_percentage,
+                             included_parties_indices=included_parties_indices,
+                             Secure_Aggregation_SMC=Secure_Aggregation_SMC,
+                             parties_reset_func=Interface.parties_reset)
+
+print("========================================")
+print("LEARNING...")
+start = timeit.default_timer()
+list_of_trees = server.make_tree_group(impurity_measure='entropy', num_of_trees=number_of_trees)
+stop = timeit.default_timer()
+print("A Group of ", number_of_trees, "Trees are Learned!")
+print("Elapsed Time: ", stop-start, " Sec")
+print("========================================")
+print("CLASSIFICATION PERFORMANCE...")
+
+prediction, true_labels = \
+    Prediction_and_Classification_Performance.get_result_vectors(list_of_trees, test_set)
+
+groundTruth.append(true_labels)
+prediction_list_kPPDERT.append(prediction)
+
+
+
+def print_results(labels_vec, predictions_vec):
+    # tn, fp, fn, tp = confusion_matrix(labels_vec, predictions_vec).ravel()
+    f1_performance = f1_score(labels_vec, predictions_vec, average='weighted')
+    acc_performance = accuracy_score(labels_vec, predictions_vec)
+    mcc_performance = matthews_corrcoef(labels_vec, predictions_vec)
+    # print("tn, fp, fn, tp: ", tn, fp, fn, tp)
+    print("f1_performance: ", f1_performance)
+    print("acc_performance", acc_performance)
+    print("mcc_performance: ", mcc_performance)
+
+
+print("CLASSIFICATION PERFORMANCE...")
+groundTruth_vec = np.concatenate(np.asarray(groundTruth))
+prediction_kPPDERT_vec = np.concatenate(np.asarray(prediction_list_kPPDERT))
+print("groundTruth_vec and prediction_ert_vec:")
+print_results(groundTruth_vec, prediction_kPPDERT_vec)
 

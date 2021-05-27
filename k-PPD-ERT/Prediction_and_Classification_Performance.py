@@ -27,12 +27,12 @@ def ensemble_get_vectors(tree_group, data):
         unique, counts = np.unique(votes, return_counts=True)
         prediction[i] = unique[np.argmax(counts)]
 
-    prediction = np.array(prediction);
-    prediction = prediction.astype(int);
+    prediction = np.array(prediction)
+    prediction = prediction.astype(int)
     # prediction = prediction.reshape(-1,1);print(prediction.shape)
     prediction = prediction + 1
-    true_labels = np.array(true_labels);
-    true_labels = true_labels.astype(int);
+    true_labels = np.array(true_labels)
+    true_labels = true_labels.astype(int)
     # true_labels = true_labels.reshape(-1,1);print(true_labels.shape)
     true_labels = true_labels + 1
 
@@ -48,7 +48,7 @@ def ensemble_f1_score_for_a_set(tree_group, data):
     if len(unique) > 2:  # multi class
         performance = f1_score(true_labels, prediction, labels=unique, average='macro')
     else:  # binary class
-        performance = f1_score(true_labels, prediction, labels=unique)
+        performance = f1_score(true_labels, prediction, labels=unique, average='weighted')
         if performance==0:
             tn, fp, fn, tp = confusion_matrix(true_labels, prediction).ravel()
             # print("tn, fp, fn, tp",tn, fp, fn, tp)
@@ -100,3 +100,7 @@ def ensemble_GMean_for_a_set(tree_group, data):
         performance = product
 
     return performance
+
+def get_result_vectors(tree_group, data):
+    prediction, true_labels, _ = ensemble_get_vectors(tree_group, data)
+    return prediction, true_labels
