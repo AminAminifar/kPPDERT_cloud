@@ -115,7 +115,6 @@ groundTruth.append(true_labels)
 prediction_list_kPPDERT.append(prediction)
 
 
-
 def print_results(labels_vec, predictions_vec):
     # tn, fp, fn, tp = confusion_matrix(labels_vec, predictions_vec).ravel()
     f1_performance = f1_score(labels_vec, predictions_vec, average='weighted')

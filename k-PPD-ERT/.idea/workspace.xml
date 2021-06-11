@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="088bd376-3e7c-4350-8256-89edd32f8ec9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/DERT-V5.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DERT-V5.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main_ Simulation_k_PPD_ERT.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main_ Simulation_k_PPD_ERT.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,38 +57,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/Tree_Elements.py" />
-        <option value="$PROJECT_DIR$/Distributed_ERT_version5.py" />
-        <option value="$PROJECT_DIR$/Main_Distributed_ERT_version5.py" />
-        <option value="$PROJECT_DIR$/Score_Measure.py" />
-        <option value="$PROJECT_DIR$/backup_main.py" />
-        <option value="$PROJECT_DIR$/Main_ Simulation_Distributed_ERT_V5.py" />
-        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_2.txt" />
-        <option value="$PROJECT_DIR$/temp.py" />
-        <option value="$PROJECT_DIR$/text.py" />
-        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_3.txt" />
-        <option value="$PROJECT_DIR$/Main_ Simulation_Distributed_ERT_V6.py" />
-        <option value="$PROJECT_DIR$/Import_Data.py" />
-        <option value="$PROJECT_DIR$/model_selection.py" />
-        <option value="$PROJECT_DIR$/learning_time_estimation.py" />
-        <option value="$PROJECT_DIR$/Prediction_and_Classification_Performance.py" />
-        <option value="$PROJECT_DIR$/Initialize_parties.py" />
-        <option value="$PROJECT_DIR$/server_class.py" />
-        <option value="$PROJECT_DIR$/Tree_Learning_Requirements.py" />
-        <option value="$PROJECT_DIR$/Initialization.py" />
-        <option value="$PROJECT_DIR$/generate_parties.py" />
-        <option value="$PROJECT_DIR$/test.py" />
-        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.txt" />
-        <option value="$PROJECT_DIR$/Server_Parties_Interface.py" />
-        <option value="$PROJECT_DIR$/party_class.py" />
-        <option value="$PROJECT_DIR$/k_PPD_ERT_functions.py" />
-        <option value="$PROJECT_DIR$/Main_ Simulation_PPD_ERT.py" />
-      </list>
-    </option>
-  </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-10" />
     <option name="y" value="-10" />
@@ -93,30 +65,14 @@
   </component>
   <component name="ProjectId" id="1sx2mbNzi8XdboZIFLTWk5kmzZq" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="k-PPD-ERT_V10" type="b2602c69:ProjectViewProjectNode" />
-              <item name="k-PPD-ERT_V10" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
-  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="TEXT" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -127,7 +83,7 @@
       <recent name="C:\Amin\Workplace\GitHub\k-ppd-ert\k-PPD-ERT" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Main_ Simulation_k_PPD_ERT_INTROMAT_Data">
+  <component name="RunManager" selected="Python.Main_ Simulation_k_PPD_ERT">
     <configuration name="Main_ Simulation_PPD_ERT" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="DERT-V5" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -142,6 +98,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="C:\Amin\Workplace\GitHub\k-ppd-ert\k-PPD-ERT\Main_ Simulation_k_PPD_ERT.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Main_ Simulation_k_PPD_ERT" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="DERT-V5" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Main_ Simulation_k_PPD_ERT.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -194,28 +172,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="DERT-V5" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="C:\Amin\Workplace\Python\Distributed ML\PPD-ERT_GitHub\learning_time_estimation.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="DERT-V5" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -240,11 +196,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Main_ Simulation_k_PPD_ERT_INTROMAT_Data" />
+        <item itemvalue="Python.Main_ Simulation_k_PPD_ERT" />
         <item itemvalue="Python.Main_ Simulation_PPD_ERT" />
+        <item itemvalue="Python.Main_ Simulation_k_PPD_ERT_INTROMAT_Data" />
         <item itemvalue="Python.test" />
         <item itemvalue="Python.learning_time_estimation" />
-        <item itemvalue="Python.test (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -260,6 +216,7 @@
       <option name="presentableId" value="Default" />
       <updated>1595819903643</updated>
       <workItem from="1621800081397" duration="14419000" />
+      <workItem from="1623417470475" duration="412000" />
     </task>
     <task id="LOCAL-00001" summary="pycharm commit&#10;change dataset and num of parties">
       <created>1621810966097</created>
@@ -334,35 +291,49 @@
     <option name="localTasksCounter" value="11" />
     <servers />
   </component>
-  <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.16438356" />
-      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="0" weight="0.32941177" />
-      <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.50319827" side_tool="true" weight="0.32843137" />
-      <window_info anchor="bottom" id="Python Console" order="2" weight="0.32941177" />
-      <window_info anchor="bottom" id="Message" order="3" />
-      <window_info anchor="bottom" id="Find" order="4" weight="0.32941177" />
-      <window_info anchor="bottom" id="Version Control" order="5" />
-      <window_info anchor="bottom" id="Run" order="6" sideWeight="0.4968017" weight="0.32843137" />
-      <window_info anchor="bottom" id="Debug" order="7" sideWeight="0.49947312" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="10" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="pycharm commit&#10;change dataset and num of parties" />
     <option name="LAST_COMMIT_MESSAGE" value="pycharm commit&#10;change dataset and num of parties" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1623417516514">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1623417516514" />
+    <state width="1306" height="43" key="GridCell.Tab.0.bottom" timestamp="1623417896078">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1306" height="43" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1623417896078" />
+    <state width="1306" height="43" key="GridCell.Tab.0.center" timestamp="1623417896078">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1306" height="43" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1623417896078" />
+    <state width="1306" height="43" key="GridCell.Tab.0.left" timestamp="1623417896078">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1306" height="43" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1623417896078" />
+    <state width="1306" height="43" key="GridCell.Tab.0.right" timestamp="1623417896078">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1306" height="43" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1623417896078" />
+    <state x="184" y="9" key="SettingsEditor" timestamp="1623417548842">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1623417548842" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -375,150 +346,8 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/k_PPD_ERT$Main__Simulation_PPD_ERT.coverage" NAME="Main_ Simulation_PPD_ERT Coverage Results" MODIFIED="1622136196462" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/k_PPD_ERT$Main__Simulation_k_PPD_ERT_INTROMAT_Data.coverage" NAME="Main_ Simulation_k_PPD_ERT_INTROMAT_Data Coverage Results" MODIFIED="1622137918664" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/backup_main.py" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_2.txt" />
-    <entry file="file://$PROJECT_DIR$/temp.py" />
-    <entry file="file://$PROJECT_DIR$/Tree_Elements.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_3.txt" />
-    <entry file="file://$PROJECT_DIR$/Score_Measure.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model_selection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Prediction_and_Classification_Performance.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="45" column="11" lean-forward="true" selection-start-line="45" selection-start-column="11" selection-end-line="45" selection-end-column="11" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tree_Learning_Requirements.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/learning_time_estimation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1620">
-          <caret line="99" column="3" lean-forward="true" selection-start-line="99" selection-start-column="3" selection-end-line="99" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server_class.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="56" selection-start-line="16" selection-start-column="56" selection-end-line="16" selection-end-column="56" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Initialization.py" />
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/random.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8557">
-          <caret line="134" selection-start-line="134" selection-end-line="134" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2">
-          <caret line="59" column="12" lean-forward="true" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.py" />
-    <entry file="file://$PROJECT_DIR$/k_PPD_ERT_functions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="839">
-          <caret line="169" column="116" selection-start-line="169" selection-start-column="116" selection-end-line="169" selection-end-column="116" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Server_Parties_Interface.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="27" column="34" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/party_class.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="699">
-          <caret line="165" column="47" selection-start-line="165" selection-start-column="47" selection-end-line="165" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/generate_parties.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Import_Data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1134">
-          <caret line="63" column="54" selection-start-line="63" selection-start-column="54" selection-end-line="63" selection-end-column="87" />
-          <folding>
-            <element signature="e#0#52#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Main_ Simulation_PPD_ERT.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="108" column="83" lean-forward="true" selection-start-line="108" selection-start-column="83" selection-end-line="108" selection-end-column="83" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <SUITE FILE_PATH="coverage/k_PPD_ERT$Main__Simulation_PPD_ERT.coverage" NAME="Main_ Simulation_PPD_ERT Coverage Results" MODIFIED="1623417692645" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/k_PPD_ERT$Main__Simulation_k_PPD_ERT.coverage" NAME="Main_ Simulation_k_PPD_ERT Coverage Results" MODIFIED="1623417896047" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/k_PPD_ERT$Main__Simulation_k_PPD_ERT_INTROMAT_Data.coverage" NAME="Main_ Simulation_k_PPD_ERT_INTROMAT_Data Coverage Results" MODIFIED="1623417618953" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
