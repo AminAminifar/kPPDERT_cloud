@@ -5,15 +5,14 @@ import numpy as np
 def find_range_of_data(data, attribute_information):
     attributes_range = []
     for i in range(len(attribute_information)):
-        if attribute_information[i]==["categorical"]:
-            unique = np.unique(data[:,i], return_counts=False)
+        if attribute_information[i] == ["categorical"]:
+            unique = np.unique(data[:, i], return_counts=False)
             attributes_range.append(unique)
         else:
-            range_min = np.amin(data[:,i])
-            range_max = np.amax(data[:,i])
+            range_min = np.amin(data[:, i])
+            range_max = np.amax(data[:, i])
             attributes_range.append([range_min, range_max])
     return attributes_range
-
 
 
 def import_data(dataset_name="Adult"):
