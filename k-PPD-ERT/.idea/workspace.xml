@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="088bd376-3e7c-4350-8256-89edd32f8ec9" name="Default Changelist" comment="" />
+    <list default="true" id="088bd376-3e7c-4350-8256-89edd32f8ec9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../DERT/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -117,7 +120,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="TEXT" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../DERT" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -258,7 +261,7 @@
       <option name="presentableId" value="Default" />
       <updated>1595819903643</updated>
       <workItem from="1621800081397" duration="14419000" />
-      <workItem from="1623417838838" duration="643000" />
+      <workItem from="1623417838838" duration="1985000" />
     </task>
     <task id="LOCAL-00001" summary="pycharm commit&#10;change dataset and num of parties">
       <created>1621810966097</created>
@@ -344,7 +347,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623418401024</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="pycharm commit&#10;change dataset and num of parties">
+      <created>1623418543677</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1623418543677</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -388,7 +398,7 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/k_PPD_ERT$Main__Simulation_k_PPD_ERT.coverage" NAME="Main_ Simulation_k_PPD_ERT Coverage Results" MODIFIED="1623417908417" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/k_PPD_ERT$Main__Simulation_k_PPD_ERT.coverage" NAME="Main_ Simulation_k_PPD_ERT Coverage Results" MODIFIED="1623418491396" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/k_PPD_ERT$Main__Simulation_PPD_ERT.coverage" NAME="Main_ Simulation_PPD_ERT Coverage Results" MODIFIED="1622136196462" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/k_PPD_ERT$Main__Simulation_k_PPD_ERT_INTROMAT_Data.coverage" NAME="Main_ Simulation_k_PPD_ERT_INTROMAT_Data Coverage Results" MODIFIED="1622137918664" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
