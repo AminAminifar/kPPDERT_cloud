@@ -127,7 +127,7 @@ class Party:
         true_set_classes = np.zeros((self.num_criteria, self.num_target_classes))
         false_set_classes = np.zeros((self.num_criteria, self.num_target_classes))
         rnd_sum_others = np.zeros((self.num_criteria, self.num_target_classes))
-        rnd_sum_self= np.zeros((self.num_criteria, self.num_target_classes))
+        rnd_sum_self = np.zeros((self.num_criteria, self.num_target_classes))
 
         # check my participation
         # !!! RANDOM SEED AND STATE !!!
