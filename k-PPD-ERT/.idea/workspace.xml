@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="088bd376-3e7c-4350-8256-89edd32f8ec9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../DERT/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Initialization/.idea/Initialization.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Initialization/party.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Initialization/party.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -118,9 +119,10 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="TEXT" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../DERT" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Initialization" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -262,6 +264,7 @@
       <updated>1595819903643</updated>
       <workItem from="1621800081397" duration="14419000" />
       <workItem from="1623417838838" duration="1985000" />
+      <workItem from="1623516910890" duration="1532000" />
     </task>
     <task id="LOCAL-00001" summary="pycharm commit&#10;change dataset and num of parties">
       <created>1621810966097</created>
