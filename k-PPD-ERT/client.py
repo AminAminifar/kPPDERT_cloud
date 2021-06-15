@@ -2,7 +2,7 @@ import socket
 from src import generate_parties
 import tools
 import pickle
-import  numpy as np
+import numpy as np
 
 
 
@@ -60,7 +60,7 @@ party = generate_parties.generate(global_seed=global_seed, number_of_parties=num
                                   Secure_Aggregation_Parameter_k=Secure_Aggregation_Parameter_k,
                                   seed_common=seed_common,
                                   num_participating_parties=num_participating_parties,
-                                  party_id=my_username) # added username as party_id
+                                  party_id=my_username)  # added username as party_id
 
 
 print("Learning is started...")

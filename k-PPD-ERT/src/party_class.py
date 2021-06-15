@@ -1,6 +1,6 @@
 import numpy as np
 import random
-import k_PPD_ERT_functions
+from src import k_PPD_ERT_functions
 
 
 class Party:

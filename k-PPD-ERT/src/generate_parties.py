@@ -1,4 +1,4 @@
-import party_class
+from src import party_class
 import numpy as np
 import random
 

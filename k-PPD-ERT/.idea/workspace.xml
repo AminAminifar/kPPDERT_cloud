@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="088bd376-3e7c-4350-8256-89edd32f8ec9" name="Default Changelist" comment="" />
+    <list default="true" id="088bd376-3e7c-4350-8256-89edd32f8ec9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generate_parties.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/generate_parties.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/party_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/party_class.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -118,7 +123,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="TEXT" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -264,7 +269,7 @@
       <workItem from="1623417838838" duration="1985000" />
       <workItem from="1623516910890" duration="7272000" />
       <workItem from="1623748502728" duration="5249000" />
-      <workItem from="1623761710317" duration="3681000" />
+      <workItem from="1623761710317" duration="5056000" />
     </task>
     <task id="LOCAL-00001" summary="pycharm commit&#10;change dataset and num of parties">
       <created>1621810966097</created>
@@ -420,7 +425,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623768101826</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="pycharm commit&#10;change dataset and num of parties">
+      <created>1623768804067</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1623768804067</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="ToolWindowManager">
