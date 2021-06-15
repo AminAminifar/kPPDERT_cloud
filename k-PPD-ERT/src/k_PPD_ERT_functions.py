@@ -37,15 +37,15 @@ class ToolsForkPPDERT:
          input: no input
          output: IDs (indices) of participating parties"""
 
-        parties = list(range(0, self.num_parties))
-
-        # !!! USING PARTICULAR RANDOM SEED AND STATE !!!
-        random.seed(self.SPP)
-        if self.SPP_state is not None:
-            random.setstate(self.SPP_state)
-        random.shuffle(parties)
-        self.SPP_state = random.getstate()
-        # !!! USING PARTICULAR RANDOM SEED AND STATE !!!
+        # parties = list(range(0, self.num_parties))
+        #
+        # # !!! USING PARTICULAR RANDOM SEED AND STATE !!!
+        # random.seed(self.SPP)
+        # if self.SPP_state is not None:
+        #     random.setstate(self.SPP_state)
+        # random.shuffle(parties)
+        # self.SPP_state = random.getstate()
+        # # !!! USING PARTICULAR RANDOM SEED AND STATE !!!
 
         participating_parties_ids = parties[0: self.num_participating_parties]
         self.participating_parties = np.sort(participating_parties_ids)

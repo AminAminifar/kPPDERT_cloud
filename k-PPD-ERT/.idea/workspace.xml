@@ -131,7 +131,7 @@
       <recent name="C:\Amin\Workplace\GitHub\k-ppd-ert\k-PPD-ERT\src\INTROMAT" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Main_ Simulation_k_PPD_ERT (1)">
+  <component name="RunManager" selected="Python.Main_ Simulation_k_PPD_ERT">
     <configuration name="Main_ Simulation_PPD_ERT" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="DERT-V5" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -244,7 +244,6 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Main_ Simulation_k_PPD_ERT (1)" />
         <item itemvalue="Python.Main_ Simulation_k_PPD_ERT" />
         <item itemvalue="Python.Main_ Simulation_k_PPD_ERT_INTROMAT_Data" />
         <item itemvalue="Python.Main_ Simulation_PPD_ERT" />
@@ -266,7 +265,7 @@
       <workItem from="1621800081397" duration="14419000" />
       <workItem from="1623417838838" duration="1985000" />
       <workItem from="1623516910890" duration="7272000" />
-      <workItem from="1623748502728" duration="3623000" />
+      <workItem from="1623748502728" duration="5249000" />
     </task>
     <task id="LOCAL-00001" summary="pycharm commit&#10;change dataset and num of parties">
       <created>1621810966097</created>
@@ -387,7 +386,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623749952425</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="pycharm commit&#10;change dataset and num of parties">
+      <created>1623758685678</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1623758685678</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="ToolWindowManager">
