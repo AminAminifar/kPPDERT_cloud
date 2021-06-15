@@ -47,7 +47,8 @@ class interface:
             party.update_data_table(best_criterion, node_id, branch)
             # print(getsizeof(best_criterion)+getsizeof(node_id)+getsizeof(branch));exit()
 
-    def party_updates_others(self, party_id, ssp_self, ssa_self):
+    def party_updates_others(self, #party_id, ssp_self,
+                             ssa_self):
         """description"""
 
         for i in range(0,self.num_parties):
