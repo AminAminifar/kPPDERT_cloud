@@ -126,6 +126,10 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Amin\Workplace\GitHub\k-ppd-ert\k-PPD-ERT" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Amin\Workplace\GitHub\k-ppd-ert\k-PPD-ERT\src\INTROMAT and other files" />
+      <recent name="C:\Amin\Workplace\GitHub\k-ppd-ert\k-PPD-ERT\src\INTROMAT" />
+    </key>
   </component>
   <component name="RunManager" selected="Python.Main_ Simulation_k_PPD_ERT (1)">
     <configuration name="Main_ Simulation_PPD_ERT" type="PythonConfigurationType" factoryName="Python" temporary="true">
@@ -150,7 +154,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Main_ Simulation_k_PPD_ERT (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Main_ Simulation_k_PPD_ERT" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="DERT-V5" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -158,12 +162,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/Main_ Simulation_k_PPD_ERT.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Main_ Simulation_k_PPD_ERT.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -180,12 +184,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Main_ Simulation_k_PPD_ERT.py" />
+      <option name="SCRIPT_NAME" value="C:\Amin\Workplace\GitHub\k-ppd-ert\k-PPD-ERT\src\INTROMAT and other files\Main_ Simulation_k_PPD_ERT.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -262,7 +266,7 @@
       <workItem from="1621800081397" duration="14419000" />
       <workItem from="1623417838838" duration="1985000" />
       <workItem from="1623516910890" duration="7272000" />
-      <workItem from="1623748502728" duration="999000" />
+      <workItem from="1623748502728" duration="3623000" />
     </task>
     <task id="LOCAL-00001" summary="pycharm commit&#10;change dataset and num of parties">
       <created>1621810966097</created>
@@ -369,7 +373,21 @@
       <option name="project" value="LOCAL" />
       <updated>1623524240375</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="pycharm commit&#10;change dataset and num of parties">
+      <created>1623749845722</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1623749845722</updated>
+    </task>
+    <task id="LOCAL-00017" summary="pycharm commit&#10;change dataset and num of parties">
+      <created>1623749952425</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1623749952425</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="ToolWindowManager">
