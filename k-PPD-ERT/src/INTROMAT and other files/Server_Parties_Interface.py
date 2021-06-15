@@ -61,8 +61,8 @@ class interface:
         input: no input
         output: no output"""
         for party in self.parties:
-            self.party_updates_others(party_id=party.ToolsForkPPDERT.party_ID,
-                                      ssp_self=party.ToolsForkPPDERT.SSP_self,
+            self.party_updates_others(#party_id=party.ToolsForkPPDERT.party_ID,
+                                      #ssp_self=party.ToolsForkPPDERT.SSP_self,
                                       ssa_self=party.ToolsForkPPDERT.SSA_self)
 
     def parties_reset(self):
