@@ -10,7 +10,7 @@ class ToolsForkPPDERT:
         self.num_criteria = num_criteria
         self.num_parties = num_parties
         self.party_ID = party_id
-        self.num_participating_parties = num_participating_parties
+        self.num_participating_parties = num_participating_parties # all parties in this case
         self.participating_parties = []
         self.Secure_Aggregation_Parameter_k = secure_aggregation_parameter_k
         self.SPP = spp
@@ -39,13 +39,13 @@ class ToolsForkPPDERT:
 
         parties = list(range(0, self.num_parties))
 
-        # !!! USING PARTICULAR RANDOM SEED AND STATE !!!
-        random.seed(self.SPP)
-        if self.SPP_state is not None:
-            random.setstate(self.SPP_state)
-        random.shuffle(parties)
-        self.SPP_state = random.getstate()
-        # !!! USING PARTICULAR RANDOM SEED AND STATE !!!
+        # # !!! USING PARTICULAR RANDOM SEED AND STATE !!!
+        # random.seed(self.SPP)
+        # if self.SPP_state is not None:
+        #     random.setstate(self.SPP_state)
+        # random.shuffle(parties)
+        # self.SPP_state = random.getstate()
+        # # !!! USING PARTICULAR RANDOM SEED AND STATE !!!
 
         participating_parties_ids = parties[0: self.num_participating_parties]
         self.participating_parties = np.sort(participating_parties_ids)
@@ -82,13 +82,13 @@ class ToolsForkPPDERT:
         participating_parties_temp = copy.deepcopy(self.participating_parties)
         participating_parties_temp = self.exclude_my_id(participating_parties_temp)
 
-        # !!! USING PARTICULAR RANDOM SEED AND STATE !!!
-        random.seed(self.SSP_self)
-        if self.SSP_self_state is not None:
-            random.setstate(self.SSP_self_state)
-        random.shuffle(participating_parties_temp)
-        self.SSP_self_state = random.getstate()
-        # !!! USING PARTICULAR RANDOM SEED AND STATE !!!
+        # # !!! USING PARTICULAR RANDOM SEED AND STATE !!!
+        # random.seed(self.SSP_self)
+        # if self.SSP_self_state is not None:
+        #     random.setstate(self.SSP_self_state)
+        # random.shuffle(participating_parties_temp)
+        # self.SSP_self_state = random.getstate()
+        # # !!! USING PARTICULAR RANDOM SEED AND STATE !!!
 
         peer_parties = participating_parties_temp[0: self.Secure_Aggregation_Parameter_k + 1]
         peer_parties = np.array(peer_parties)
@@ -105,13 +105,13 @@ class ToolsForkPPDERT:
         for ID in self.participating_parties:
             participating_parties_temp = copy.deepcopy(self.participating_parties)
 
-            # !!! USING PARTICULAR RANDOM SEED AND STATE !!!
-            random.seed(self.SSP_others[ID])
-            if self.SSP_others_state[ID] is not None:
-                random.setstate(self.SSP_others_state[ID])
-            random.shuffle(participating_parties_temp)
-            self.SSP_others_state[ID] = random.getstate()
-            # !!! USING PARTICULAR RANDOM SEED AND STATE !!!
+            # # !!! USING PARTICULAR RANDOM SEED AND STATE !!!
+            # random.seed(self.SSP_others[ID])
+            # if self.SSP_others_state[ID] is not None:
+            #     random.setstate(self.SSP_others_state[ID])
+            # random.shuffle(participating_parties_temp)
+            # self.SSP_others_state[ID] = random.getstate()
+            # # !!! USING PARTICULAR RANDOM SEED AND STATE !!!
 
             participating_parties_temp = participating_parties_temp[0: self.Secure_Aggregation_Parameter_k + 1]
             if self.check_my_presence(participating_parties_temp):

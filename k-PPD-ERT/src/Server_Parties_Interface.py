@@ -51,8 +51,8 @@ class interface:
         """description"""
 
         for i in range(0,self.num_parties):
-            self.parties[i].ToolsForkPPDERT.SSP_others.append(ssp_self)
-            self.parties[i].ToolsForkPPDERT.SSP_others_state.append(None)
+            # self.parties[i].ToolsForkPPDERT.SSP_others.append(ssp_self)
+            # self.parties[i].ToolsForkPPDERT.SSP_others_state.append(None)
             self.parties[i].ToolsForkPPDERT.SSA_others.append(ssa_self[i])
             self.parties[i].ToolsForkPPDERT.SSA_others_state.append(None)
 

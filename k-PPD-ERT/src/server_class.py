@@ -3,6 +3,7 @@ import Tree_Learning_Requirements
 import numpy as np
 import timeit
 
+
 class server:
 
     def __init__(self, global_seed, attribute_range, attribute_info, num_target_classes,\
@@ -19,10 +20,7 @@ class server:
                     included_parties_indices,Secure_Aggregation_SMC)
         self.parties_reset_func = parties_reset_func
 
-
-
-
-    #_Making Trees
+    # Making Trees
     def make_tree_group(self, impurity_measure='entropy', num_of_trees=10):
         """MAKE A BUNCH OF TREES
         input: data, data info, impurity measure, desiered number of trees

@@ -2,6 +2,8 @@ import socket
 from src import generate_parties
 import tools
 import pickle
+import  numpy as np
+
 
 
 def receive_message(_client_socket):
@@ -37,10 +39,29 @@ print("Party is initializing for learning...")
 train_set, test_set, attribute_information, attributes_range, number_target_classes \
      = tools.get_chunk_of_data(my_username, 'Adult')
 
-party = generate_parties.generate(global_seed=13, train_set=train_set,
+# initialization
+# Settings
+global_seed = 101
+seed_common = 102
+number_of_parties = 2  # 80
+number_of_trees = 5
+attribute_percentage = np.around(np.sqrt(len(attribute_information)) / len(attribute_information), decimals=3)
+num_participating_parties = number_of_parties
+Secure_Aggregation_SMC = True  # False # True if simulation of SMC part is required
+Secure_Aggregation_Parameter_k = num_participating_parties-1  # can be changed to a value<num_participating_parties
+
+party = generate_parties.generate(global_seed=global_seed, number_of_parties=number_of_parties,
+                                  train_set=train_set,
                                   attribute_information=attribute_information,
                                   number_target_classes=number_target_classes,
-                                  attributes_range=attributes_range)
+                                  attributes_range=attributes_range,
+                                  attribute_percentage=attribute_percentage,
+                                  Secure_Aggregation_SMC=Secure_Aggregation_SMC,
+                                  Secure_Aggregation_Parameter_k=Secure_Aggregation_Parameter_k,
+                                  seed_common=seed_common,
+                                  num_participating_parties=num_participating_parties,
+                                  party_id=my_username) # added username as party_id
+
 
 print("Learning is started...")
 while True:
