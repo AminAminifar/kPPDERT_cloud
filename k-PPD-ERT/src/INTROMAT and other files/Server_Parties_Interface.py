@@ -47,24 +47,29 @@ class interface:
             party.update_data_table(best_criterion, node_id, branch)
             # print(getsizeof(best_criterion)+getsizeof(node_id)+getsizeof(branch));exit()
 
-    def party_updates_others(self, #party_id, ssp_self,
-                             ssa_self):
-        """description"""
-
-        for i in range(0,self.num_parties):
-            # self.parties[i].ToolsForkPPDERT.SSP_others.append(ssp_self)
-            # self.parties[i].ToolsForkPPDERT.SSP_others_state.append(None)
-            self.parties[i].ToolsForkPPDERT.SSA_others.append(ssa_self[i])
-            self.parties[i].ToolsForkPPDERT.SSA_others_state.append(None)
-
+    # def party_updates_others(self, #party_id, ssp_self,
+    #                          ssa_self):
+    #     """description"""
+    #
+    #     for i in range(0,self.num_parties):
+    #         # self.parties[i].ToolsForkPPDERT.SSP_others.append(ssp_self)
+    #         # self.parties[i].ToolsForkPPDERT.SSP_others_state.append(None)
+    #         self.parties[i].ToolsForkPPDERT.SSA_others.append(ssa_self[i])
+    #         self.parties[i].ToolsForkPPDERT.SSA_others_state.append(None)
+    #
+    # def initialize_parties(self):
+    #     """Exchange random seeds by data holder parties in the initialization phase
+    #     input: no input
+    #     output: no output"""
+    #     for party in self.parties:
+    #         self.party_updates_others(#party_id=party.ToolsForkPPDERT.party_ID,
+    #                                   #ssp_self=party.ToolsForkPPDERT.SSP_self,
+    #                                   ssa_self=party.ToolsForkPPDERT.SSA_self)
     def initialize_parties(self):
-        """Exchange random seeds by data holder parties in the initialization phase
-        input: no input
-        output: no output"""
-        for party in self.parties:
-            self.party_updates_others(#party_id=party.ToolsForkPPDERT.party_ID,
-                                      #ssp_self=party.ToolsForkPPDERT.SSP_self,
-                                      ssa_self=party.ToolsForkPPDERT.SSA_self)
+        for j in range(0, self.num_parties):
+            for i in range(0, self.num_parties):
+                self.parties[i].ToolsForkPPDERT.SSA_others.append(party[j].ToolsForkPPDERT.SSA_self[i])
+                self.parties[i].ToolsForkPPDERT.SSA_others_state.append(None)
 
     def parties_reset(self):
         for party in self.parties:
