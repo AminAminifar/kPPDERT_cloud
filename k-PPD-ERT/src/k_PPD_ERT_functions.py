@@ -37,8 +37,8 @@ class ToolsForkPPDERT:
          input: no input
          output: IDs (indices) of participating parties"""
 
-        # parties = list(range(0, self.num_parties))
-        #
+        parties = list(range(0, self.num_parties))
+
         # # !!! USING PARTICULAR RANDOM SEED AND STATE !!!
         # random.seed(self.SPP)
         # if self.SPP_state is not None:
@@ -82,13 +82,13 @@ class ToolsForkPPDERT:
         participating_parties_temp = copy.deepcopy(self.participating_parties)
         participating_parties_temp = self.exclude_my_id(participating_parties_temp)
 
-        # !!! USING PARTICULAR RANDOM SEED AND STATE !!!
-        random.seed(self.SSP_self)
-        if self.SSP_self_state is not None:
-            random.setstate(self.SSP_self_state)
-        random.shuffle(participating_parties_temp)
-        self.SSP_self_state = random.getstate()
-        # !!! USING PARTICULAR RANDOM SEED AND STATE !!!
+        # # !!! USING PARTICULAR RANDOM SEED AND STATE !!!
+        # random.seed(self.SSP_self)
+        # if self.SSP_self_state is not None:
+        #     random.setstate(self.SSP_self_state)
+        # random.shuffle(participating_parties_temp)
+        # self.SSP_self_state = random.getstate()
+        # # !!! USING PARTICULAR RANDOM SEED AND STATE !!!
 
         peer_parties = participating_parties_temp[0: self.Secure_Aggregation_Parameter_k + 1]
         peer_parties = np.array(peer_parties)
