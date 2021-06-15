@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="088bd376-3e7c-4350-8256-89edd32f8ec9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/k_PPD_ERT_functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/k_PPD_ERT_functions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server_Parties_Interface.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server_Parties_Interface.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -267,7 +266,7 @@
       <workItem from="1623417838838" duration="1985000" />
       <workItem from="1623516910890" duration="7272000" />
       <workItem from="1623748502728" duration="5249000" />
-      <workItem from="1623761710317" duration="1953000" />
+      <workItem from="1623761710317" duration="3100000" />
     </task>
     <task id="LOCAL-00001" summary="pycharm commit&#10;change dataset and num of parties">
       <created>1621810966097</created>
@@ -409,7 +408,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623761793346</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="pycharm commit&#10;change dataset and num of parties">
+      <created>1623763840312</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1623763840312</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="ToolWindowManager">
