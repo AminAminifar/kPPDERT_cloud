@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="088bd376-3e7c-4350-8256-89edd32f8ec9" name="Default Changelist" comment="pycharm commit&#10;change dataset and num of parties">
+    <list default="true" id="088bd376-3e7c-4350-8256-89edd32f8ec9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Server_Parties_Interface.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/INTROMAT and other files/Server_Parties_Interface.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/INTROMAT and other files/Server_Parties_Interface.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/INTROMAT and other files/Server_Parties_Interface.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,15 +120,18 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="TEXT" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Amin\Workplace\GitHub\k-ppd-ert\k-PPD-ERT\src" />
       <recent name="C:\Amin\Workplace\GitHub\k-ppd-ert\k-PPD-ERT" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Amin\Workplace\GitHub\k-ppd-ert\k-PPD-ERT\src\INTROMAT and other files" />
+      <recent name="C:\Amin\Workplace\GitHub\k-ppd-ert\k-PPD-ERT\src" />
+      <recent name="C:\Amin\Workplace\GitHub\k-ppd-ert\k-PPD-ERT" />
       <recent name="C:\Amin\Workplace\GitHub\k-ppd-ert\k-PPD-ERT\src\INTROMAT" />
     </key>
   </component>
@@ -267,7 +270,7 @@
       <workItem from="1623417838838" duration="1985000" />
       <workItem from="1623516910890" duration="7272000" />
       <workItem from="1623748502728" duration="5249000" />
-      <workItem from="1623761710317" duration="7507000" />
+      <workItem from="1623761710317" duration="10051000" />
     </task>
     <task id="LOCAL-00001" summary="pycharm commit&#10;change dataset and num of parties">
       <created>1621810966097</created>
@@ -437,7 +440,42 @@
       <option name="project" value="LOCAL" />
       <updated>1623770194566</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="pycharm commit&#10;change dataset and num of parties">
+      <created>1623772600433</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1623772600433</updated>
+    </task>
+    <task id="LOCAL-00026" summary="pycharm commit&#10;change dataset and num of parties">
+      <created>1623772689890</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1623772689890</updated>
+    </task>
+    <task id="LOCAL-00027" summary="pycharm commit&#10;change dataset and num of parties">
+      <created>1623773871140</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1623773871140</updated>
+    </task>
+    <task id="LOCAL-00028" summary="pycharm commit&#10;change dataset and num of parties">
+      <created>1623774354963</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1623774354963</updated>
+    </task>
+    <task id="LOCAL-00029" summary="pycharm commit&#10;change dataset and num of parties">
+      <created>1623774375952</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1623774375952</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="ToolWindowManager">
