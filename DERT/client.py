@@ -75,3 +75,6 @@ while True:
         message = pickle.dumps("update is completed")
         client_socket.send(message)
         # print("client completed update request")
+
+    if message['flag'] == "initialization":
+        print("Initialization")

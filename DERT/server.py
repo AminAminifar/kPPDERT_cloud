@@ -3,6 +3,7 @@ import src.server_class
 import src.Server_Parties_Interface
 from tools import get_information_of_data
 import src.Prediction_and_Classification_Performance
+import pickle
 
 HEADER_LENGTH = 10
 IP = socket.gethostname()
@@ -49,8 +50,13 @@ while i <= number_of_parties:
     print(f"Accepted new connection from {client_address[0]} : {client_address[1]} "
           f"username: {party['data'].decode('utf-8')}")
 
-
 print("All parties are accepted!")
+
+print("Server send code to clients to start initialization!")
+for party in parties:
+    message = {"flag": "initialization"}
+    party.send(pickle.dumps(message))
+
 
 interface = src.Server_Parties_Interface.Interface(parties, socket_list)
 
