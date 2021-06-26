@@ -52,11 +52,6 @@ while i <= number_of_parties:
 
 print("All parties are accepted!")
 
-print("Server send code to clients to start initialization!")
-for party in parties:
-    message = {"flag": "initialization", "parties": parties}
-    party.send(pickle.dumps(message))
-
 interface = src.Server_Parties_Interface.Interface(parties, socket_list)
 
 test_set, attribute_information, attributes_range, number_target_classes = get_information_of_data('Adult')
