@@ -15,8 +15,10 @@ class Party:
         self.key = RSA.generate(2048)
         self.publickey = self.key.publickey()
         self.n = num_parties
+        self.k = num_parties
         self.seeds = None
-        self.ecrypted_seeds = None
+        self.encrypted_seeds = None
+        self.decrypted_seeds = None
 
     def share_public_key(self):
         """This function shares public key to mediator"""
@@ -34,4 +36,13 @@ class Party:
             pub_key = pub_keys[i]
             seed = self.seeds[i]
             temp.append(pub_key.encrypt(long(seed), '')[0])
+        self.encrypted_seeds = np.array(temp)
+
+    def decrypt_seeds(self, received_seeds):
+        temp = []
+        for i in range(self.k - 1):
+            seed = received_seeds[i]
+            temp.append(self.key.decrypt(seed))
+        self.decrypted_seeds = np.array(temp)
+
 
