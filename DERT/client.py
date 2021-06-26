@@ -35,7 +35,7 @@ client_socket.send(username_header + username)
 
 print("Party is initializing for learning...")
 train_set, test_set, attribute_information, attributes_range, number_target_classes \
-     = tools.get_chunk_of_data(my_username, 'Adult')
+    = tools.get_chunk_of_data(my_username, 'Adult')
 
 party = generate_parties.generate(global_seed=13, train_set=train_set,
                                   attribute_information=attribute_information,
@@ -44,14 +44,15 @@ party = generate_parties.generate(global_seed=13, train_set=train_set,
 
 print("Learning is started...")
 while True:
-    # Party waits for server request : {'check' or 'update_data_table'}
+    # Party waits for server request : {'check' or 'update_data_table' or 'initialization'}
     message = client_socket.recv(1024)
     message = pickle.loads(message)
 
     if message['flag'] == "check":
-
         # print("client is processing check request")
         node_id = message['node_id']
+        if node_id == 0:
+            party.data_table = []
         branch = message['branch']
         true_temp, false_temp = party.check(node_id, branch)
         dic = {"true_temp": true_temp, "false_temp": false_temp}
@@ -60,7 +61,6 @@ while True:
         # print("client completed check request")
 
     if message['flag'] == "update_data_table":
-
         # print("client is processing update request")
         attribute_type = message['attribute_type']
         attribute_index = message['attribute_index']
@@ -76,5 +76,3 @@ while True:
         client_socket.send(message)
         # print("client completed update request")
 
-    if message['flag'] == "initialization":
-        print("Initialization")

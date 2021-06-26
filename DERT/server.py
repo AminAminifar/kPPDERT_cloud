@@ -54,9 +54,8 @@ print("All parties are accepted!")
 
 print("Server send code to clients to start initialization!")
 for party in parties:
-    message = {"flag": "initialization"}
+    message = {"flag": "initialization", "parties": parties}
     party.send(pickle.dumps(message))
-
 
 interface = src.Server_Parties_Interface.Interface(parties, socket_list)
 
