@@ -23,7 +23,8 @@ class ToolsForkPPDERT:
         self.SSP_others_state = []#None
         self.SSA_self_state = []#None
         self.SSA_others_state = []#None
-        self.set_self_seeds()
+        # self.set_self_seeds()
+        self.set_seeds_from_file()
 
     def set_self_seeds(self):
         self.SSP_self = np.random.randint(10 ** 8, size=1)[0]
@@ -32,11 +33,11 @@ class ToolsForkPPDERT:
             self.SSA_self_state.append(None)
 
     def set_seeds_from_file(self):
-        seeds_mat = ...
-        for i in range(0, self.num_parties):
+        seeds_mat = np.loadtxt('Seeds/' + str(party_ID) + '.txt', dtype=str)
+        for i in range(0, self.num_parties-1):
             self.SSA_self.append(seeds_mat[i])
             self.SSA_self_state.append(None)
-            self.SSA_others.append(seeds_mat[i+self.num_parties])
+            self.SSA_others.append(seeds_mat[i+self.num_parties-1])
             self.SSA_others_state.append(None)
 
     def identify_participating_parties(self):
