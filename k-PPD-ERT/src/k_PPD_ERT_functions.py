@@ -31,6 +31,14 @@ class ToolsForkPPDERT:
             self.SSA_self.append(np.random.randint(10 ** 8, size=1)[0])
             self.SSA_self_state.append(None)
 
+    def set_seeds_from_file(self):
+        seeds_mat = ...
+        for i in range(0, self.num_parties):
+            self.SSA_self.append(seeds_mat[i])
+            self.SSA_self_state.append(None)
+            self.SSA_others.append(seeds_mat[i+self.num_parties])
+            self.SSA_others_state.append(None)
+
     def identify_participating_parties(self):
         """identify which parties will participate in this round
          for selecting the best candidate node/leaf
