@@ -70,7 +70,7 @@ server = server_class.server(global_seed=global_seed, attribute_range=attributes
                              parties_update_func=Interface.parties_update,
                              attribute_percentage=attribute_percentage,
                              included_parties_indices=included_parties_indices,
-                             Secure_Aggregation_SMC=Secure_Aggregation_SMC) #parties_reset_func=Interface.parties_reset
+                             Secure_Aggregation_SMC=Secure_Aggregation_SMC)  # parties_reset_func=Interface.parties_reset
 
 print("learning is started...")
 learned_model = server.make_tree_group()
