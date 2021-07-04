@@ -8,7 +8,7 @@ class server:
 
     def __init__(self, global_seed, attribute_range, attribute_info, num_target_classes,\
                  aggregator_func, parties_update_func, attribute_percentage,\
-                 included_parties_indices, Secure_Aggregation_SMC, parties_reset_func):
+                 included_parties_indices, Secure_Aggregation_SMC):  # parties_reset_func
         self.attribute_range = attribute_range
         self.attribute_info = attribute_info
         self.num_target_classes = num_target_classes
@@ -18,7 +18,7 @@ class server:
                     self.attribute_range, self.attribute_info, self.num_target_classes,\
                     aggregator_func, parties_update_func, attribute_percentage,\
                     included_parties_indices,Secure_Aggregation_SMC)
-        self.parties_reset_func = parties_reset_func
+        # self.parties_reset_func = parties_reset_func
 
     # Making Trees
     def make_tree_group(self, impurity_measure='entropy', num_of_trees=10):
@@ -31,7 +31,7 @@ class server:
             print("Learning tree:", i + 1, "/", num_of_trees)
             start = timeit.default_timer()
             tree_group.append(self.grow_tree(impurity_measure=impurity_measure))
-            self.parties_reset_func()
+            # self.parties_reset_func()
             stop = timeit.default_timer()
             print("number of secure aggregations (cumulative): ",self.TLR.num_transactions)
             print("number of updates (cumulative): ", self.TLR.num_updates)
