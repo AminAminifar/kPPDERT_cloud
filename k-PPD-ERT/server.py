@@ -56,9 +56,21 @@ interface = src.Server_Parties_Interface.Interface(parties, socket_list)
 
 test_set, attribute_information, attributes_range, number_target_classes = get_information_of_data('Adult')
 
-server = src.server_class.server(global_seed=13, attribute_range=attributes_range, attribute_info=attribute_information,
-                                 num_target_classes=number_target_classes, aggregator_func=interface.aggregator,
-                                 parties_update_func=interface.parties_update)
+# initialization
+# Settings
+global_seed = 101
+attribute_percentage = np.around(np.sqrt(len(attribute_information)) / len(attribute_information), decimals=3)
+Secure_Aggregation_SMC = True  # False # True if simulation of SMC part is required
+included_parties_indices = np.array(range(0,number_of_parties))
+
+server = server_class.server(global_seed=global_seed, attribute_range=attributes_range,
+                             attribute_info=attribute_information,
+                             num_target_classes=number_target_classes,
+                             aggregator_func=Interface.aggregator,
+                             parties_update_func=Interface.parties_update,
+                             attribute_percentage=attribute_percentage,
+                             included_parties_indices=included_parties_indices,
+                             Secure_Aggregation_SMC=Secure_Aggregation_SMC) #parties_reset_func=Interface.parties_reset
 
 print("learning is started...")
 learned_model = server.make_tree_group()
