@@ -122,7 +122,7 @@ class Tree_Learning_Requirements:
         # divide the data based on the selected attribute and split
         true_set_clasess, false_set_clasess = self.aggregator_func(node_id, branch, random_func_state,
                                                          self.num_target_classes, num_criteria=num_rnd_att)
-        self.num_transactions +=1
+        self.num_transactions += 1
 
         ## FOR SMC PART
         # if self.Secure_Aggregation_SMC:

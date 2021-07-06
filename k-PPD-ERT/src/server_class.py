@@ -14,7 +14,7 @@ class server:
         self.num_target_classes = num_target_classes
         # self.aggregator_func = aggregator_func
         # self.parties_update_func = parties_update_func
-        self.TLR = Tree_Learning_Requirements.Tree_Learning_Requirements(global_seed,\
+        self.TLR = src.Tree_Learning_Requirements.Tree_Learning_Requirements(global_seed,\
                     self.attribute_range, self.attribute_info, self.num_target_classes,\
                     aggregator_func, parties_update_func, attribute_percentage,\
                     included_parties_indices,Secure_Aggregation_SMC)
