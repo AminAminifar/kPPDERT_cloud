@@ -120,7 +120,7 @@ class Tree_Learning_Requirements:
             criterion_list.append(self.Criterion(attribute_type, index_of_the_attribute, rnd_split))
 
         # divide the data based on the selected attribute and split
-        true_set_clasess, false_set_clasess = self.aggregator_func(node_id, branch, random_func_state,
+        true_set_clasess, false_set_clasess = self.aggregator_func(node_id, branch,
                                                          self.num_target_classes, num_criteria=num_rnd_att)
         self.num_transactions += 1
 
