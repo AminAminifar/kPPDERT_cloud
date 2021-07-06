@@ -1,4 +1,4 @@
-import Score_Measure
+import src.Score_Measure
 import numpy as np
 import random
 
