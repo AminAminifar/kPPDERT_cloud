@@ -9,7 +9,7 @@ class ToolsForkPPDERT:
         self.num_target_classes = num_target_classes
         self.num_criteria = num_criteria
         self.num_parties = num_parties
-        self.party_ID = party_id
+        self.party_ID = int(party_id)
         self.num_participating_parties = num_participating_parties # all parties in this case
         self.participating_parties = []
         self.Secure_Aggregation_Parameter_k = secure_aggregation_parameter_k

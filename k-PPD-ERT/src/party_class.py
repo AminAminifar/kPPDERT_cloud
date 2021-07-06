@@ -20,7 +20,7 @@ class Party:
         self.global_seed = global_seed
         random.seed(global_seed)
         self.att_perc = attribute_percentage
-        self.num_criteria = round(self.att_perc * len(self.attribute_info))
+        self.num_criteria = np.int(round(self.att_perc * len(self.attribute_info)))
         self.Secure_Aggregation_SMC = secure_aggregation_smc
         self.ToolsForkPPDERT = k_PPD_ERT_functions.ToolsForkPPDERT(self.num_target_classes, self.num_criteria,
                                                                    num_parties, party_id,
