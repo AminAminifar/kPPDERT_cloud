@@ -3,6 +3,7 @@ import src.server_class
 import src.Server_Parties_Interface
 from tools import get_information_of_data
 import src.Prediction_and_Classification_Performance
+import numpy as np
 
 HEADER_LENGTH = 10
 IP = socket.gethostname()
