@@ -10,10 +10,8 @@ import math
 import random
 from Cryptodome.Cipher import PKCS1_OAEP
 
-print("hi----------------------------------------------------")
-
-key = RSA.generate(2048)
-publickey = key.publickey()
+# key = RSA.generate(2048)
+# publickey = key.publickey()
 
 # seed = 100
 #
@@ -31,23 +29,24 @@ publickey = key.publickey()
 # de_mul = key.decrypt(mul)
 # print("de_mul: ", de_mul)
 
-cipher = PKCS1_OAEP.new(key)
-text = b'The secret I want to send.'
-en_text = cipher.encrypt(text)
-print("en_text: ", en_text)
+# cipher = PKCS1_OAEP.new(key)
+# text = b'The secret I want to send.'
+# en_text = cipher.encrypt(text)
+# print("en_text: ", en_text)
 # de_text = cipher.encrypt(en_text)
 # print("de_text: ", de_text)
 
 keyPair = RSA.generate(3072)
 pubKey = keyPair.publickey()
-pubKeyPEM = pubKey.exportKey()
+# pubKeyPEM = pubKey.exportKey()
 # print(pubKeyPEM.decode('ascii'))
-privKeyPEM = keyPair.exportKey()
+# privKeyPEM = keyPair.exportKey()
 # print(privKeyPEM.decode('ascii'))
 
 
 msg = b'100'
 encryptor = PKCS1_OAEP.new(pubKey)
+print(pubKey)
 encrypted = encryptor.encrypt(msg)
 print("Encrypted:",encrypted)
 

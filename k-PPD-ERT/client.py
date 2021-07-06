@@ -4,8 +4,6 @@ import tools
 import pickle
 import numpy as np
 
-
-
 def receive_message(_client_socket):
     try:
         message_header = _client_socket.recv(HEADER_LENGTH)
