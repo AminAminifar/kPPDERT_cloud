@@ -37,7 +37,7 @@ class ToolsForkPPDERT:
         for i in range(0, self.num_parties):
             self.SSA_self.append(seeds_mat[i])
             self.SSA_self_state.append(None)
-            self.SSA_others.append(seeds_mat[i+self.num_parties-1])
+            self.SSA_others.append(seeds_mat[i+self.num_parties])
             self.SSA_others_state.append(None)
 
     def identify_participating_parties(self):
