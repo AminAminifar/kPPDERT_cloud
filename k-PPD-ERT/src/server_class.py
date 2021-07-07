@@ -49,7 +49,7 @@ class server:
             self.TLR.find_best_attribute(impurity_measure, node_id,branch)
 
         if purity_val == 0:
-            return Tree_Elements.End_Node(
+            return src.Tree_Elements.End_Node(
                 np.argmax(np.array(classes)))  # the label would be the index of the maximum value in the classes vector
         else:
 
@@ -62,7 +62,7 @@ class server:
             branch = False
             false_branch = self.grow_tree(impurity_measure, node_id, branch)
 
-            node = Tree_Elements.Node(criterion, true_branch, false_branch)
+            node = src.Tree_Elements.Node(criterion, true_branch, false_branch)
             return node
 
 

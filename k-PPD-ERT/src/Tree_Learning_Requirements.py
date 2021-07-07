@@ -136,7 +136,7 @@ class Tree_Learning_Requirements:
                     false_set_clasess[i, :]) == 0 or stop_flag):  ## to be checked in case of error
                 # calculate the purity measure after division
                 # adopting the above criterion
-                purity_val = Score_Measure.purity(true_set_clasess[i, :], false_set_clasess[i, :], impurity_measure)
+                purity_val = src.Score_Measure.purity(true_set_clasess[i, :], false_set_clasess[i, :], impurity_measure)
                 if purity_val > best_value:
                     best_value, best_criterion = purity_val, criterion_list[i]
 

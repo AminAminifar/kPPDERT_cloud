@@ -4,7 +4,7 @@ from sklearn.metrics import f1_score,accuracy_score,confusion_matrix
 
 #_Prediction and Classification Performance
 def Tree_Predict(tree, sampel):
-    if isinstance(tree, Tree_Elements.End_Node):
+    if isinstance(tree, src.Tree_Elements.End_Node):
         prediction = tree.label
     else:
         if tree.criterion.check(sampel):

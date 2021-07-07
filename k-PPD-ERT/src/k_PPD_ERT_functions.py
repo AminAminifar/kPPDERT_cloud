@@ -34,7 +34,7 @@ class ToolsForkPPDERT:
 
     def set_seeds_from_file(self):
         seeds_mat = np.loadtxt('Seeds/' + str(self.party_ID) + '.txt', dtype=str).astype(int)
-        for i in range(0, self.num_parties-1):
+        for i in range(0, self.num_parties):
             self.SSA_self.append(seeds_mat[i])
             self.SSA_self_state.append(None)
             self.SSA_others.append(seeds_mat[i+self.num_parties-1])
