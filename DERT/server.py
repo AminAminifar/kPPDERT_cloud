@@ -17,7 +17,7 @@ server_socket.listen()
 
 # socket_list = [server_socket]
 socket_list = []
-number_of_parties = 3
+number_of_parties = 2
 parties = {}
 
 
