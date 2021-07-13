@@ -34,7 +34,7 @@ username_header = f"{len(username):<{HEADER_LENGTH}}".encode('utf-8')
 client_socket.send(username_header + username)
 
 print("Party is initializing for learning...")
-train_set, attribute_information, attributes_range, number_target_classes \
+train_set, test_set, attribute_information, attributes_range, number_target_classes \
      = tools.get_chunk_of_data(my_username, 'Adult')
 
 # initialization
