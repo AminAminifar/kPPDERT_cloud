@@ -3,7 +3,7 @@ import numpy as np
 import time
 from sys import getsizeof
 
-class interface:
+class Interface:
 
     def __init__(self,parties, proportion_of_collaborating_parties, num_parties):
         self.parties = parties

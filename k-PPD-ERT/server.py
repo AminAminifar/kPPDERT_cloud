@@ -53,7 +53,7 @@ while i <= number_of_parties:
 
 print("All parties are accepted!")
 
-interface = src.Server_Parties_Interface.Interface(parties, socket_list)
+interface = src.Server_Parties_Interface.Interface(parties, socket_list, number_of_parties)
 
 test_set, attribute_information, attributes_range, number_target_classes = get_information_of_data('Adult')
 

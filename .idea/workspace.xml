@@ -1,13 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="f4e7f408-d0c2-44d9-83f3-795cf32646a1" name="Default Changelist" comment="Initialization seeds (updated)">
+    <list default="true" id="f4e7f408-d0c2-44d9-83f3-795cf32646a1" name="Default Changelist" comment="Rollback chunk of test data">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Initialization/.idea/Initialization.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Initialization/.idea/Initialization.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Initialization/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Initialization/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Initialization/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Initialization/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DERT/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/DERT/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/k-PPD-ERT/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/k-PPD-ERT/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/k-PPD-ERT/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/k-PPD-ERT/client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k-PPD-ERT/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/k-PPD-ERT/server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k-PPD-ERT/src/Server_Parties_Interface.py" beforeDir="false" afterPath="$PROJECT_DIR$/k-PPD-ERT/src/Server_Parties_Interface.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +50,10 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunManager">
     <configuration name="temp" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -64,7 +84,10 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="f4e7f408-d0c2-44d9-83f3-795cf32646a1" name="Default Changelist" comment="" />
@@ -74,6 +97,9 @@
       <updated>1625338595288</updated>
       <workItem from="1625338596949" duration="6212000" />
       <workItem from="1625593751994" duration="493000" />
+      <workItem from="1626206528780" duration="1398000" />
+      <workItem from="1626208046358" duration="1715000" />
+      <workItem from="1626210026015" duration="624000" />
     </task>
     <task id="LOCAL-00001" summary="Initialization seeds (will be updated)">
       <created>1625340046125</created>
@@ -131,22 +157,78 @@
       <option name="project" value="LOCAL" />
       <updated>1625594163036</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Initialization seeds (updated)">
+      <created>1626207028256</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1626207028256</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Rollback chunk of test data">
+      <created>1626208613552</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1626208613552</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Revert &quot;remove chunk of test data&quot;&#10;&#10;This reverts commit a67b0907">
+      <created>1626209518105</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1626209518105</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initialization seeds (will be updated)" />
-    <MESSAGE value="Initialization seeds (updated)" />
     <MESSAGE value="Server (updated)" />
     <MESSAGE value="server_class.py (updated)" />
     <MESSAGE value="client (updated)" />
-    <option name="LAST_COMMIT_MESSAGE" value="client (updated)" />
+    <MESSAGE value="Initialization seeds (updated)" />
+    <MESSAGE value="Rollback chunk of test data" />
+    <MESSAGE value="Revert &quot;remove chunk of test data&quot;&#10;&#10;This reverts commit a67b0907" />
+    <option name="LAST_COMMIT_MESSAGE" value="Revert &quot;remove chunk of test data&quot;&#10;&#10;This reverts commit a67b0907" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="216" y="0" key="CommitChangelistDialog2" timestamp="1626209517237">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="216" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1626209517237" />
+    <state x="539" y="84" key="RollbackChangesDialog" timestamp="1626208460181">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="539" y="84" key="RollbackChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1626208460181" />
+    <state x="492" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1626207358423">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="492" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1626207358423" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/k_ppd_ert$temp.coverage" NAME="temp Coverage Results" MODIFIED="1625355035551" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/k-PPD-ERT/src" />
