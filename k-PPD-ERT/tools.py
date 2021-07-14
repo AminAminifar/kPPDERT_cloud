@@ -19,7 +19,7 @@ def get_chunk_of_data(username, dataset):
     root = os.getcwd()
     src_path = root + '/DistributedDatasets/' + dataset
     train_set = np.genfromtxt(src_path + '/tr_party_num_' + username + '.csv', delimiter=',')
-    test_set = np.genfromtxt(src_path + '/ts_party_num_' + username + '.csv', delimiter=',')
+    # test_set = np.genfromtxt(src_path + '/ts_party_num_' + username + '.csv', delimiter=',')
 
     # train_set = train_set[0:100, :]
 
@@ -39,7 +39,7 @@ def get_chunk_of_data(username, dataset):
                              ["categorical"]]
 
     train_indices = []
-    test_indices = []
+    # test_indices = []
     all_train_indices = []
 
     src_path = root + '/src/Datasets/' + dataset
@@ -50,17 +50,17 @@ def get_chunk_of_data(username, dataset):
     for i in range(len(unique)):
         train_indices.append(train_set[:, -1] == unique[i])
         all_train_indices.append(all_train_set[:, -1] == unique[i])
-        test_indices.append(test_set[:, -1] == unique[i])
+        # test_indices.append(test_set[:, -1] == unique[i])
     for i in range(len(unique)):
         train_set[train_indices[i], -1] = int(i)
         all_train_set[all_train_indices[i], -1] = int(i)
-        test_set[test_indices[i], -1] = int(i)
+        # test_set[test_indices[i], -1] = int(i)
 
     number_target_classes = len(unique)
 
     attributes_range = _find_range_of_data(all_train_set, attribute_information)
 
-    return train_set, test_set, attribute_information, attributes_range, number_target_classes
+    return train_set, attribute_information, attributes_range, number_target_classes
 
 
 def get_information_of_data(dataset):
