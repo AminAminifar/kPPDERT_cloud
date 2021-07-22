@@ -18,7 +18,7 @@ def receive_message(_client_socket):
 
 
 HEADER_LENGTH = 10
-IP = socket.gethostname()
+IP = socket.gethostname() #'13.53.90.238'
 PORT = 12345
 
 print("Please enter the party number...")
