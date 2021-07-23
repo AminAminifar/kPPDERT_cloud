@@ -1,11 +1,12 @@
 import numpy as np
 import random
 import copy
+import os
 
 
 class ToolsForkPPDERT:
     def __init__(self, num_target_classes, num_criteria, num_parties, party_id,
-                 num_participating_parties, secure_aggregation_parameter_k, spp):
+                 num_participating_parties, secure_aggregation_parameter_k, spp, scenario):
         self.num_target_classes = num_target_classes
         self.num_criteria = num_criteria
         self.num_parties = num_parties
@@ -24,7 +25,9 @@ class ToolsForkPPDERT:
         self.SSA_self_state = []#None
         self.SSA_others_state = []#None
         # self.set_self_seeds()
+        self.scenario = scenario
         self.set_seeds_from_file()
+
 
     def set_self_seeds(self):
         self.SSP_self = np.random.randint(10 ** 8, size=1)[0]
@@ -33,7 +36,9 @@ class ToolsForkPPDERT:
             self.SSA_self_state.append(None)
 
     def set_seeds_from_file(self):
-        seeds_mat = np.loadtxt('../../Scenario/Scenario 1/Seeds/' + str(self.party_ID) + '.txt', dtype=str).astype(int)
+        root = os.getcwd()
+        src_path = "{}\\Scenario\\Scenario {}\\Seeds\\".format(root, self.scenario)
+        seeds_mat = np.loadtxt(src_path + str(self.party_ID) + '.txt', dtype=str).astype(int)
         for i in range(0, self.num_parties):
             self.SSA_self.append(seeds_mat[i])
             self.SSA_self_state.append(None)

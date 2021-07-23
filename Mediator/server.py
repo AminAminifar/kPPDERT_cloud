@@ -17,8 +17,17 @@ server_socket.listen()
 
 # socket_list = [server_socket]
 socket_list = []
-number_of_parties = 2
+
 parties = {}
+
+print("Please enter number of parties ...")
+number_of_parties = int(input("number of parties  :"))
+
+print("Please enter the scenario number...")
+scenario = int(input("scenario number :"))
+
+print("Please enter dataset name...")
+dataset = input("dataset name :")
 
 
 print("Server initialization is completed on IP: {0}, Port: {1}".format(IP, PORT))
@@ -55,7 +64,7 @@ print("All parties are accepted!")
 
 interface = src.Server_Parties_Interface.Interface(parties, socket_list)
 
-test_set, attribute_information, attributes_range, number_target_classes = get_information_of_data('Adult')
+test_set, attribute_information, attributes_range, number_target_classes = get_information_of_data(scenario, dataset)
 
 # initialization
 # Settings

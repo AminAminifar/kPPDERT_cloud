@@ -4,6 +4,7 @@ import tools
 import pickle
 import numpy as np
 
+
 def receive_message(_client_socket):
     try:
         message_header = _client_socket.recv(HEADER_LENGTH)
@@ -18,11 +19,20 @@ def receive_message(_client_socket):
 
 
 HEADER_LENGTH = 10
-IP = socket.gethostname() #'13.53.90.238'
+IP = socket.gethostname()
 PORT = 12345
+
+print("Please enter number of parties ...")
+number_of_parties = input("number of parties  :")
 
 print("Please enter the party number...")
 my_username = input("party number :")
+
+print("Please enter the scenario number...")
+scenario = input("scenario number :")
+
+print("Please enter dataset name...")
+dataset = input("dataset name :")
 
 print("Party is connecting to the server with IP: {0}, Port: {1}".format(IP, PORT))
 client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -35,18 +45,18 @@ client_socket.send(username_header + username)
 
 print("Party is initializing for learning...")
 train_set, attribute_information, attributes_range, number_target_classes \
-     = tools.get_chunk_of_data(my_username, 'Adult')
+    = tools.get_chunk_of_data(my_username, dataset, int(scenario))
 
 # initialization
 # Settings
 global_seed = 101
 seed_common = 102
-number_of_parties = 2  # 80
+number_of_parties = int(number_of_parties)  # 80
 number_of_trees = 5
 attribute_percentage = np.around(np.sqrt(len(attribute_information)) / len(attribute_information), decimals=3)
 num_participating_parties = number_of_parties
 Secure_Aggregation_SMC = True  # False # True if simulation of SMC part is required
-Secure_Aggregation_Parameter_k = num_participating_parties-1  # can be changed to a value<num_participating_parties
+Secure_Aggregation_Parameter_k = num_participating_parties - 1  # can be changed to a value<num_participating_parties
 
 party = generate_parties.generate(global_seed=global_seed, number_of_parties=number_of_parties,
                                   train_set=train_set,
@@ -58,41 +68,43 @@ party = generate_parties.generate(global_seed=global_seed, number_of_parties=num
                                   Secure_Aggregation_Parameter_k=Secure_Aggregation_Parameter_k,
                                   seed_common=seed_common,
                                   num_participating_parties=num_participating_parties,
-                                  party_id=my_username)  # added username as party_id
-
+                                  party_id=my_username, scenario=scenario)  # added username as party_id
 
 print("Learning is started...")
 while True:
-    # Party waits for server request : {'check' or 'update_data_table'}
-    message = client_socket.recv(1024)
-    message = pickle.loads(message)
+    try:
+        # Party waits for server request : {'check' or 'update_data_table'}
+        message = client_socket.recv(1024)
+        message = pickle.loads(message)
 
-    if message['flag'] == "check":
+        if message['flag'] == "check":
 
-        # print("client is processing check request")
-        node_id = message['node_id']
-        if node_id == 0:
-            party.data_table = []
-        branch = message['branch']
-        true_temp, false_temp = party.check(node_id, branch)
-        dic = {"true_temp": true_temp, "false_temp": false_temp}
-        dict_message = pickle.dumps(dic)
-        client_socket.send(dict_message)
-        # print("client completed check request")
+            # print("client is processing check request")
+            node_id = message['node_id']
+            if node_id == 0:
+                party.data_table = []
+            branch = message['branch']
+            true_temp, false_temp = party.check(node_id, branch)
+            dic = {"true_temp": true_temp, "false_temp": false_temp}
+            dict_message = pickle.dumps(dic)
+            client_socket.send(dict_message)
+            # print("client completed check request")
 
-    if message['flag'] == "update_data_table":
+        if message['flag'] == "update_data_table":
+            # print("client is processing update request")
+            attribute_type = message['attribute_type']
+            attribute_index = message['attribute_index']
+            point_or_category = message['point_or_category']
+            node_id = message['node_id']
+            branch = message['branch']
 
-        # print("client is processing update request")
-        attribute_type = message['attribute_type']
-        attribute_index = message['attribute_index']
-        point_or_category = message['point_or_category']
-        node_id = message['node_id']
-        branch = message['branch']
+            # create criterion object
+            best_criterion = party.Criterion(attribute_type, attribute_index, point_or_category)
 
-        # create criterion object
-        best_criterion = party.Criterion(attribute_type, attribute_index, point_or_category)
-
-        party.update_data_table(best_criterion, node_id, branch)
-        message = pickle.dumps("update is completed")
-        client_socket.send(message)
-        # print("client completed update request")
+            party.update_data_table(best_criterion, node_id, branch)
+            message = pickle.dumps("update is completed")
+            client_socket.send(message)
+            # print("client completed update request")
+    except:
+        print('Server is not longer available')
+        exit()

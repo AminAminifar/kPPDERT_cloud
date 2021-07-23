@@ -10,7 +10,7 @@ class Party:
 
     def __init__(self, global_seed, data_subset, attribute_range, attribute_info, num_target_classes,
                  attribute_percentage, spp, num_participating_parties,
-                 secure_aggregation_smc, secure_aggregation_parameter_k, num_parties, party_id):
+                 secure_aggregation_smc, secure_aggregation_parameter_k, num_parties, party_id, scenario):
         self.data_subset = data_subset
         self.data_table = []
         self.global_random_state = None
@@ -25,7 +25,7 @@ class Party:
         self.ToolsForkPPDERT = k_PPD_ERT_functions.ToolsForkPPDERT(self.num_target_classes, self.num_criteria,
                                                                    num_parties, party_id,
                                                                    num_participating_parties,
-                                                                   secure_aggregation_parameter_k, spp)
+                                                                   secure_aggregation_parameter_k, spp, scenario)
 
     class Criterion:
         """The criterion objects instantiated from Criterion class are used to divide a data set into two sets"""
