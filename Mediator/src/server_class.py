@@ -27,6 +27,7 @@ class server:
         output: a list incorporating num_of_trees learned trees"""
 
         tree_group = []
+        start_all = timeit.default_timer()
         for i in range(num_of_trees):
             print("Learning tree:", i + 1, "/", num_of_trees)
             start = timeit.default_timer()
@@ -35,8 +36,11 @@ class server:
             stop = timeit.default_timer()
             print("number of secure aggregations (cumulative): ",self.TLR.num_transactions)
             print("number of updates (cumulative): ", self.TLR.num_updates)
-            print("Elapsed Time: ", stop - start, " Sec")
+            print("Elapsed time: ", stop - start, " Sec")
             print("==============================")
+        stop_all = timeit.default_timer()
+        print("Elapsed time for learning all trees: ", stop_all - start_all, " Sec")
+        print("Average elapsed time for learning a tree: ", (stop_all - start_all) / num_of_trees, " Sec")
 
         return tree_group
 
