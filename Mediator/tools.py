@@ -5,7 +5,7 @@ import pickle
 
 def get_information_of_data(scenario, dataset):
 
-    root = os.getcwd()
+    root = os.path.normpath(os.getcwd() + os.sep + os.pardir)  #  os.getcwd()
     src_path = "{}\\Scenario\\Scenario {}\\Dataset\\{}".format(root, scenario, dataset)
 
     train_indices = []
