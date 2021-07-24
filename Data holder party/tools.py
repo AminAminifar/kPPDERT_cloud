@@ -5,31 +5,25 @@ import pickle
 
 def get_chunk_of_data(username, dataset, scenario):
     root = os.path.normpath(os.getcwd() + os.sep + os.pardir)  #  os.getcwd()
-    src_path = "{}\\Scenario\\Scenario {}\\Dataset\\{}".format(root, scenario, dataset)
-    train_set = np.genfromtxt(src_path + '\\tr_party_num_' + username + '.csv', delimiter=',')
+    scenario_path = os.path.join("Scenario", "Scenario {}".format(scenario))
+    dataset_path = os.path.join(scenario_path, "Dataset")
+    dataset_path = os.path.join(dataset_path, dataset)
+    src_path = os.path.join(root,dataset_path)
 
-    with open('{}/attribute_information.pkl'.format(src_path,), 'rb') as f:
+    train_set_path = os.path.join(src_path, 'tr_party_num_' + username + '.csv')
+    train_set = np.genfromtxt(train_set_path, delimiter=',')
+
+    attribute_information_path = os.path.join(src_path, 'attribute_information.pkl')
+    with open(attribute_information_path, 'rb') as f:
         attribute_information = pickle.load(f)
 
-    with open('{}/attributes_range.pkl'.format(src_path, ), 'rb') as f:
+    attributes_range_path = os.path.join(src_path, 'attributes_range.pkl')
+    with open(attributes_range_path, 'rb') as f:
         attributes_range = pickle.load(f)
 
-    with open('{}/number_target_classes.pkl'.format(src_path,), 'rb') as f:
+    number_target_classes_path = os.path.join(src_path, 'number_target_classes.pkl')
+    with open(number_target_classes_path, 'rb') as f:
         number_target_classes = pickle.load(f)
-
-    train_indices = []
-    all_train_indices = []
-
-    all_train_set = np.genfromtxt(src_path + '/train_set' + '.csv', delimiter=',')
-
-    unique = np.unique(all_train_set[:, -1], return_counts=False)
-
-    for i in range(len(unique)):
-        train_indices.append(train_set[:, -1] == unique[i])
-        all_train_indices.append(all_train_set[:, -1] == unique[i])
-    for i in range(len(unique)):
-        train_set[train_indices[i], -1] = int(i)
-        all_train_set[all_train_indices[i], -1] = int(i)
 
     return train_set, attribute_information, attributes_range, number_target_classes
 
