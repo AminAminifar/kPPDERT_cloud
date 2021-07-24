@@ -11,7 +11,7 @@ def get_information_of_data(scenario, dataset):
     dataset_path = os.path.join(dataset_path, dataset)
     src_path = os.path.join(root,dataset_path)
 
-    test_set_path= os.path.join(src_path, 'test_set.csv')
+    test_set_path = os.path.join(src_path, 'test_set.csv')
     test_set = np.genfromtxt(test_set_path, delimiter=',')
 
 
