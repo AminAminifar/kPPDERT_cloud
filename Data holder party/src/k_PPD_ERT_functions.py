@@ -36,7 +36,7 @@ class ToolsForkPPDERT:
             self.SSA_self_state.append(None)
 
     def set_seeds_from_file(self):
-        root = os.getcwd()
+        root = os.path.normpath(os.getcwd() + os.sep + os.pardir)  #  os.getcwd()
         src_path = "{}\\Scenario\\Scenario {}\\Seeds\\".format(root, self.scenario)
         seeds_mat = np.loadtxt(src_path + str(self.party_ID) + '.txt', dtype=str).astype(int)
         for i in range(0, self.num_parties):
