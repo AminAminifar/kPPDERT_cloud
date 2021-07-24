@@ -6,13 +6,14 @@ import pickle
 def get_information_of_data(scenario, dataset):
 
     root = os.path.normpath(os.getcwd() + os.sep + os.pardir)  #  os.getcwd()
-    src_path = "{}\\Scenario\\Scenario {}\\Dataset\\{}".format(root, scenario, dataset)
+    scenario_path = os.path.join("Scenario", "Scenario {}".format(scenario))
+    dataset_path = os.path.join(scenario_path, "Dataset")
+    dataset_path = os.path.join(dataset_path, dataset)
+    src_path = os.path.join(root,dataset_path)
 
-    train_indices = []
-    test_indices = []
+    test_set_path= os.path.join(src_path, 'test_set.csv')
+    test_set = np.genfromtxt(test_set_path, delimiter=',')
 
-    train_set = np.genfromtxt(src_path + '\\train_set' + '.csv', delimiter=',')
-    test_set = np.genfromtxt(src_path + '\\test_set' + '.csv', delimiter=',')
 
     with open('{}/attribute_information.pkl'.format(src_path,), 'rb') as f:
         attribute_information = pickle.load(f)
@@ -23,13 +24,5 @@ def get_information_of_data(scenario, dataset):
     with open('{}/number_target_classes.pkl'.format(src_path,), 'rb') as f:
         number_target_classes = pickle.load(f)
 
-    unique = np.unique(train_set[:, -1], return_counts=False)
-
-    for i in range(len(unique)):
-        train_indices.append(train_set[:, -1] == unique[i])
-        test_indices.append(test_set[:, -1] == unique[i])
-    for i in range(len(unique)):
-        train_set[train_indices[i], -1] = int(i)
-        test_set[test_indices[i], -1] = int(i)
 
     return test_set, attribute_information, attributes_range, number_target_classes
