@@ -4,7 +4,7 @@ import pickle
 
 
 def get_chunk_of_data(username, dataset, scenario):
-    root = os.getcwd()
+    root = os.path.normpath(os.getcwd() + os.sep + os.pardir)  #  os.getcwd()
     src_path = "{}\\Scenario\\Scenario {}\\Dataset\\{}".format(root, scenario, dataset)
     train_set = np.genfromtxt(src_path + '\\tr_party_num_' + username + '.csv', delimiter=',')
 
