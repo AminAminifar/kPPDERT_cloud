@@ -82,7 +82,7 @@ while True:
             # print("client is processing check request")
             node_id = message['node_id']
             if node_id == 0:
-                party.data_table = []
+                party.data_table = {}
             branch = message['branch']
             true_temp, false_temp = party.check(node_id, branch)
             dic = {"true_temp": true_temp, "false_temp": false_temp}
