@@ -1,7 +1,7 @@
 import os
 import numpy as np
 import pickle
-from io import StringIO
+import pandas as pd
 
 
 def get_chunk_of_data(username, dataset, scenario):
@@ -12,7 +12,7 @@ def get_chunk_of_data(username, dataset, scenario):
     src_path = os.path.join(root,dataset_path)
 
     train_set_path = os.path.join(src_path, 'tr_party_num_' + username + '.csv')
-    train_set = np.genfromtxt(StringIO(train_set_path), delimiter=',')
+    train_set = pd.read_csv(train_set_path, sep=',').values
 
     attribute_information_path = os.path.join(src_path, 'attribute_information.pkl')
     with open(attribute_information_path, 'rb') as f:
