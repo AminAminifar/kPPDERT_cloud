@@ -1,6 +1,7 @@
 import os
 import numpy as np
 import pickle
+from io import StringIO
 
 
 def get_information_of_data(scenario, dataset):
@@ -12,7 +13,7 @@ def get_information_of_data(scenario, dataset):
     src_path = os.path.join(root,dataset_path)
 
     test_set_path = os.path.join(src_path, 'test_set.csv')
-    test_set = np.genfromtxt(test_set_path, delimiter=',')
+    test_set = np.genfromtxt(StringIO(test_set_path), delimiter=',')
 
     attribute_information_path = os.path.join(src_path, 'attribute_information.pkl')
     with open(attribute_information_path, 'rb') as f:
