@@ -12,7 +12,7 @@ class Party:
                  attribute_percentage, spp, num_participating_parties,
                  secure_aggregation_smc, secure_aggregation_parameter_k, num_parties, party_id, scenario):
         self.data_subset = data_subset
-        self.data_table = []
+        self.data_table = {}
         self.global_random_state = None
         self.attribute_range = attribute_range
         self.attribute_info = attribute_info
@@ -54,13 +54,12 @@ class Party:
         if node_id == 0:
             limited_data_indices = np.arange(self.data_subset.shape[0])
         else:
-            for i in range(len(self.data_table)):
-                id_i = np.array(self.data_table[i][0])
-                if node_id == id_i:
-                    if branch:
-                        limited_data_indices = np.array(self.data_table[i][1])  # True branch indices(for node node_id)
-                    else:
-                        limited_data_indices = np.array(self.data_table[i][2])  # False branch indices(for node node_id)
+            [true_set_indices, false_set_indices] = self.data_table[node_id]
+            if branch:
+                limited_data_indices = true_set_indices  # True branch indices(for node node_id)
+            else:
+                limited_data_indices = false_set_indices  # False branch indices(for node node_id)
+        
         return limited_data_indices
 
     def pick_a_random_split(self, attribute_indices):
@@ -186,7 +185,7 @@ class Party:
                     true_set_indices.append(index)
                 else:
                     false_set_indices.append(index)
-        self.data_table.append(([node_id + 1], true_set_indices, false_set_indices))
+        self.data_table.update({node_id + 1:[np.array(true_set_indices), np.array(false_set_indices)]})
 
     def reset_party(self):
-        self.data_table = []
+        self.data_table = {}
