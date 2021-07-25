@@ -1,6 +1,6 @@
 import src.Tree_Elements
 import numpy as np
-from sklearn.metrics import f1_score,accuracy_score,confusion_matrix
+from sklearn.metrics import f1_score, accuracy_score, confusion_matrix, matthews_corrcoef
 
 #_Prediction and Classification Performance
 def Tree_Predict(tree, sampel):
@@ -39,6 +39,7 @@ def ensemble_get_vectors(tree_group, data):
     unique = np.unique(true_labels, return_counts=False)
     return prediction, true_labels, unique
 
+
 def ensemble_f1_score_for_a_set(tree_group, data):
 
     prediction, true_labels, unique = ensemble_get_vectors(tree_group, data)
@@ -57,9 +58,6 @@ def ensemble_f1_score_for_a_set(tree_group, data):
             else:
                 performance = tn/(tn + .5*(fp + fn))
 
-
-
-
     return performance
 
 def ensemble_accuracy_for_a_set(tree_group, data):
@@ -69,6 +67,7 @@ def ensemble_accuracy_for_a_set(tree_group, data):
     performance = accuracy_score(true_labels, prediction)
 
     return performance
+
 
 def ensemble_GMean_for_a_set(tree_group, data):
 
@@ -101,6 +100,26 @@ def ensemble_GMean_for_a_set(tree_group, data):
 
     return performance
 
+
 def get_result_vectors(tree_group, data):
     prediction, true_labels, _ = ensemble_get_vectors(tree_group, data)
     return prediction, true_labels
+
+
+def print_results(tree_group, data):
+
+    predictions_vec, labels_vec, unique = ensemble_get_vectors(tree_group, data)
+
+    if len(unique) > 2:  # multi class
+        f1_performance = f1_score(labels_vec, predictions_vec, labels=unique, average='macro')
+    else:  # binary class
+        f1_performance = f1_score(labels_vec, predictions_vec, labels=unique, average='weighted')
+
+        tn, fp, fn, tp = confusion_matrix(labels_vec, predictions_vec).ravel()
+        print("tn, fp, fn, tp: ", tn, fp, fn, tp)
+
+    acc_performance = accuracy_score(labels_vec, predictions_vec)
+    mcc_performance = matthews_corrcoef(labels_vec, predictions_vec)
+    print("f1_performance: ", f1_performance)
+    print("acc_performance", acc_performance)
+    print("mcc_performance: ", mcc_performance)

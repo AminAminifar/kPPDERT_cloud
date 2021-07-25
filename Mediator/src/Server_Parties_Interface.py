@@ -32,7 +32,7 @@ class Interface:
             message = {"flag": "check", "node_id": node_id, "branch": branch}
 
             party.send(pickle.dumps(message))
-            print("Send check")
+            # print("Send check")
 
         i = 0
         flag = True

@@ -85,5 +85,5 @@ server = src.server_class.server(global_seed=global_seed, attribute_range=attrib
 print("learning is started...")
 learned_model = server.make_tree_group()
 
-print("Classification performance for several trees (F1 score/F1 score macro):",
-      src.Prediction_and_Classification_Performance.ensemble_f1_score_for_a_set(learned_model, test_set))
+print("Classification performance:")
+src.Prediction_and_Classification_Performance.print_results(learned_model, test_set)
