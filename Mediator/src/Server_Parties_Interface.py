@@ -27,7 +27,7 @@ class Interface:
         true_set_classes = np.zeros((num_criteria, num_target_classes))
         false_set_classes = np.zeros((num_criteria, num_target_classes))
 
-        print("server is sending check for each party")
+#         print("server is sending check for each party")
         for party in self.clients:
             message = {"flag": "check", "node_id": node_id, "branch": branch}
 
@@ -51,7 +51,7 @@ class Interface:
                 if i == len(self.clients):
                     flag = False
 
-        print("check process is completed")
+#         print("check process is completed")
         return true_set_classes, false_set_classes
 
     def parties_update(self, best_criterion, node_id, branch):
@@ -60,7 +60,7 @@ class Interface:
         (this new criterion adds new limitation on samples after previous limitation identified by node_id and branch)
         no output; just updates a list in every party"""
 
-        print("server is sending update for each party")
+#         print("server is sending update for each party")
 
         for party in self.clients:
             message = {"flag": "update_data_table",
@@ -70,7 +70,7 @@ class Interface:
                        "node_id": node_id, "branch": branch}
 
             party.send(pickle.dumps(message))
-            print("Update table sent")
+#             print("Update table sent")
 
         i = 0
         flag = True
@@ -83,4 +83,4 @@ class Interface:
                 if i == len(self.clients):
                     flag = False
 
-        print("update process is completed")
+#         print("update process is completed")
