@@ -80,7 +80,7 @@ server = src.server_class.server(global_seed=global_seed, attribute_range=attrib
                              parties_update_func=interface.parties_update,
                              attribute_percentage=attribute_percentage,
                              included_parties_indices=included_parties_indices,
-                             Secure_Aggregation_SMC=Secure_Aggregation_SMC)  # parties_reset_func=Interface.parties_reset
+                             Secure_Aggregation_SMC=Secure_Aggregation_SMC)  # parties_reset_func=Interface.parties_resetz
 
 print("learning is started...")
 learned_model = server.make_tree_group()

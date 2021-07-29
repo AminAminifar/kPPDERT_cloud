@@ -29,18 +29,32 @@ class server:
         tree_group = []
         start_all = timeit.default_timer()
         for i in range(num_of_trees):
-            print("Learning tree:", i + 1, "/", num_of_trees)
-            start = timeit.default_timer()
-            tree_group.append(self.grow_tree(impurity_measure=impurity_measure))
-            # self.parties_reset_func()
-            stop = timeit.default_timer()
-            print("number of secure aggregations (cumulative): ",self.TLR.num_transactions)
-            print("number of updates (cumulative): ", self.TLR.num_updates)
-            print("Elapsed time: ", stop - start, " Sec")
-            print("==============================")
+            with open('results.txt', 'a+') as file:
+                print("Learning tree:", i + 1, "/", num_of_trees)
+                file.write('Learning tree: {} / {} \n'.format(str(i+1), str(num_of_trees)))
+                start = timeit.default_timer()
+                tree_group.append(self.grow_tree(impurity_measure=impurity_measure))
+                # self.parties_reset_func()
+                stop = timeit.default_timer()
+                print("number of secure aggregations (cumulative): ",self.TLR.num_transactions)
+                file.write('number of secure aggregations (cumulative): {} \n'.format(str(self.TLR.num_transactions)))
+                print("number of updates (cumulative): ", self.TLR.num_updates)
+                file.write('number of updates (cumulative): {} \n'.format(str(self.TLR.num_updates)))
+                print("Elapsed time: ", stop - start, " Sec")
+                file.write('Elapsed time: {} \n'.format(str(stop - start)))
+                print("==============================")
+                file.write('------------------------------------ \n')
+
         stop_all = timeit.default_timer()
-        print("Elapsed time for learning all trees: ", stop_all - start_all, " Sec")
-        print("Average elapsed time for learning a tree: ", (stop_all - start_all) / num_of_trees, " Sec")
+        with open('results.txt', 'a+') as file:
+
+            print("Elapsed time for learning all trees: ", stop_all - start_all, " Sec")
+
+            file.write("Elapsed time for learning all trees: {} Sec\n".format(str(stop_all - start_all)))
+
+            print("Average elapsed time for learning a tree: ", (stop_all - start_all) / num_of_trees, " Sec")
+
+            file.write("Average elapsed time for learning a tree: {} Sec\n".format(str(stop_all - start_all)))
 
         return tree_group
 
