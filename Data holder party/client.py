@@ -74,25 +74,25 @@ print("Learning is started...")
 while True:
     try:
         # Party waits for server request : {'check' or 'update_data_table'}
-        message = client_socket.recv(1024)
+        message = client_socket.recv(2048)
         message = pickle.loads(message)
 
         if message['flag'] == "check":
 
-#             print("client is processing check request")
+            #             print("client is processing check request")
             node_id = message['node_id']
             if node_id == 0:
                 party.data_table = {}
             branch = message['branch']
             true_temp, false_temp = party.check(node_id, branch)
-#             print("after party.check(node_id, branch)")
+            #             print("after party.check(node_id, branch)")
             dic = {"true_temp": true_temp, "false_temp": false_temp}
             dict_message = pickle.dumps(dic)
             client_socket.send(dict_message)
-#             print("client completed check request")
+        #             print("client completed check request")
 
         if message['flag'] == "update_data_table":
-#             print("client is processing update request")
+            #             print("client is processing update request")
             attribute_type = message['attribute_type']
             attribute_index = message['attribute_index']
             point_or_category = message['point_or_category']
@@ -105,7 +105,7 @@ while True:
             party.update_data_table(best_criterion, node_id, branch)
             message = pickle.dumps("update is completed")
             client_socket.send(message)
-#             print("client completed update request")
+    #             print("client completed update request")
     except:
         print('Server is not longer available')
         exit()
