@@ -13,7 +13,7 @@ def get_information_of_data(scenario, dataset):
     src_path = os.path.join(root,dataset_path)
 
     test_set_path = os.path.join(src_path, 'test_set.csv')
-    test_set = pd.read_csv(test_set_path, sep=',').values
+    test_set = pd.read_csv(test_set_path, sep=',', header=None).values
 
     attribute_information_path = os.path.join(src_path, 'attribute_information.pkl')
     with open(attribute_information_path, 'rb') as f:
