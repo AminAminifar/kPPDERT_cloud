@@ -12,7 +12,7 @@ def get_chunk_of_data(username, dataset, scenario):
     src_path = os.path.join(root,dataset_path)
 
     train_set_path = os.path.join(src_path, 'tr_party_num_' + username + '.csv')
-    train_set = pd.read_csv(train_set_path, sep=',').values
+    train_set = pd.read_csv(train_set_path, sep=',', header=None).values
 
     attribute_information_path = os.path.join(src_path, 'attribute_information.pkl')
     with open(attribute_information_path, 'rb') as f:
