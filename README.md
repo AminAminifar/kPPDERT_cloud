@@ -1,4 +1,4 @@
-# k-ppd-ert
+# k-PPD-ERT
 
 The k-PPD-ERT framework is based on the Extremely Randomized Trees (ERT) algorithm for learning from distributed structured data. The data is assumed to be horizontally partitioned. To share partial information with the mediator, parties employ a Secure Multiparty Computation (SMC) layer on top of distributed ERT, which is robust to k colluding parties.
 
