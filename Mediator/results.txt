@@ -1,0 +1,107 @@
+
+Learning tree: 1 / 10 
+number of secure aggregations (cumulative): 73 
+number of updates (cumulative): 36 
+Elapsed time: 0.09647189999999917 
+------------------------------------ 
+Learning tree: 2 / 10 
+number of secure aggregations (cumulative): 126 
+number of updates (cumulative): 62 
+Elapsed time: 0.06668550000000018 
+------------------------------------ 
+Learning tree: 3 / 10 
+number of secure aggregations (cumulative): 171 
+number of updates (cumulative): 84 
+Elapsed time: 0.06350920000000038 
+------------------------------------ 
+Learning tree: 4 / 10 
+number of secure aggregations (cumulative): 266 
+number of updates (cumulative): 131 
+Elapsed time: 0.11661330000000092 
+------------------------------------ 
+Learning tree: 5 / 10 
+number of secure aggregations (cumulative): 367 
+number of updates (cumulative): 181 
+Elapsed time: 0.12966440000000112 
+------------------------------------ 
+Learning tree: 6 / 10 
+number of secure aggregations (cumulative): 438 
+number of updates (cumulative): 216 
+Elapsed time: 0.10062560000000076 
+------------------------------------ 
+Learning tree: 7 / 10 
+number of secure aggregations (cumulative): 485 
+number of updates (cumulative): 239 
+Elapsed time: 0.06922349999999966 
+------------------------------------ 
+Learning tree: 8 / 10 
+number of secure aggregations (cumulative): 540 
+number of updates (cumulative): 266 
+Elapsed time: 0.07606420000000114 
+------------------------------------ 
+Learning tree: 9 / 10 
+number of secure aggregations (cumulative): 631 
+number of updates (cumulative): 311 
+Elapsed time: 0.1190559000000011 
+------------------------------------ 
+Learning tree: 10 / 10 
+number of secure aggregations (cumulative): 736 
+number of updates (cumulative): 363 
+Elapsed time: 0.1330202000000007 
+------------------------------------ 
+Elapsed time for learning all trees: 1.058223100000001 Sec
+Average elapsed time for learning a tree: 1.058223100000001 Sec
+Learning tree: 1 / 10 
+Learning tree: 1 / 10 
+number of secure aggregations (cumulative): 73 
+number of updates (cumulative): 36 
+Elapsed time: 0.1385411000000003 
+------------------------------------ 
+Learning tree: 2 / 10 
+number of secure aggregations (cumulative): 126 
+number of updates (cumulative): 62 
+Elapsed time: 0.10026319999999966 
+------------------------------------ 
+Learning tree: 3 / 10 
+number of secure aggregations (cumulative): 171 
+number of updates (cumulative): 84 
+Elapsed time: 0.1109549000000003 
+------------------------------------ 
+Learning tree: 4 / 10 
+number of secure aggregations (cumulative): 266 
+number of updates (cumulative): 131 
+Elapsed time: 0.16870090000000104 
+------------------------------------ 
+Learning tree: 5 / 10 
+number of secure aggregations (cumulative): 367 
+number of updates (cumulative): 181 
+Elapsed time: 0.20821480000000037 
+------------------------------------ 
+Learning tree: 6 / 10 
+number of secure aggregations (cumulative): 438 
+number of updates (cumulative): 216 
+Elapsed time: 0.14142980000000094 
+------------------------------------ 
+Learning tree: 7 / 10 
+number of secure aggregations (cumulative): 485 
+number of updates (cumulative): 239 
+Elapsed time: 0.09129599999999982 
+------------------------------------ 
+Learning tree: 8 / 10 
+number of secure aggregations (cumulative): 540 
+number of updates (cumulative): 266 
+Elapsed time: 0.10536950000000012 
+------------------------------------ 
+Learning tree: 9 / 10 
+number of secure aggregations (cumulative): 631 
+number of updates (cumulative): 311 
+Elapsed time: 0.17857930000000088 
+------------------------------------ 
+Learning tree: 10 / 10 
+number of secure aggregations (cumulative): 736 
+number of updates (cumulative): 363 
+Elapsed time: 0.18408089999999966 
+------------------------------------ 
+Elapsed time for learning all trees: 1.5267271000000004 Sec
+Average elapsed time for learning a tree: 1.5267271000000004 Sec
+Learning tree: 1 / 10 
