@@ -5,6 +5,8 @@ from tools import get_information_of_data
 import src.Prediction_and_Classification_Performance
 import numpy as np
 import sys
+import pickle
+import select
 
 HEADER_LENGTH = 10
 IP = socket.gethostname()
@@ -89,6 +91,25 @@ def main():
 
         print("Classification performance:")
         src.Prediction_and_Classification_Performance.print_results(learned_model, test_set)
+
+        for party in parties:
+            message = {"flag": "leave"}
+            party.send(pickle.dumps(message))
+
+        flag = True
+        j=0
+        while flag:
+            read_sockets, _, exception_sockets = select.select(socket_list, [], socket_list)
+
+            for notified_socket in read_sockets:
+                if j != len(parties):
+                    message = notified_socket.recv(2048)
+                    message = pickle.loads(message)
+                    status = message["status"]
+                    if status == 'leave':
+                        j = j + 1
+                if j == len(parties):
+                    flag = False
 
 if __name__ == '__main__':
     main()

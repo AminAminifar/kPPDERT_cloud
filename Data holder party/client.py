@@ -5,7 +5,6 @@ import pickle
 import numpy as np
 import sys
 
-
 HEADER_LENGTH = 10
 IP = socket.gethostname() #"13.53.90.238"  # socket.gethostname()
 PORT = 12345
@@ -59,7 +58,7 @@ def main():
         global_seed = 101
         seed_common = 102
         number_of_parties = int(number_of_parties)  # 80
-        number_of_trees = 5
+        # number_of_trees = 5
         attribute_percentage = np.around(np.sqrt(len(attribute_information)) / len(attribute_information), decimals=3)
         num_participating_parties = number_of_parties
         Secure_Aggregation_SMC = True  # False # True if simulation of SMC part is required
@@ -84,12 +83,18 @@ def main():
                 message = client_socket.recv(2048)
                 message = pickle.loads(message)
 
+                if message['flag'] == 'leave':
+                    dic = {'status': 'leave'}
+                    client_socket.send(pickle.dumps(dic))
+                    break
+
                 if message['flag'] == "check":
 
-                    print("client is processing check request")
+                    # print("client is processing check request")
                     node_id = message['node_id']
                     if node_id == 0:
                         party.data_table = {}
+
                     branch = message['branch']
                     true_temp, false_temp = party.check(node_id, branch)
                     #             print("after party.check(node_id, branch)")
@@ -99,7 +104,7 @@ def main():
                 #             print("client completed check request")
 
                 if message['flag'] == "update_data_table":
-                    print("client is processing update request")
+                    # print("client is processing update request")
                     attribute_type = message['attribute_type']
                     attribute_index = message['attribute_index']
                     point_or_category = message['point_or_category']

@@ -28,6 +28,7 @@ class server:
 
         tree_group = []
         start_all = timeit.default_timer()
+        durations =[]
         for i in range(num_of_trees):
             with open('results.txt', 'a+') as file:
                 print("Learning tree:", i + 1, "/", num_of_trees)
@@ -42,6 +43,7 @@ class server:
                 file.write('number of updates (cumulative): {} \n'.format(str(self.TLR.num_updates)))
                 print("Elapsed time: ", stop - start, " Sec")
                 file.write('Elapsed time: {} \n'.format(str(stop - start)))
+                durations.append(start - stop)
                 print("==============================")
                 file.write('------------------------------------ \n')
 
@@ -54,7 +56,15 @@ class server:
 
             print("Average elapsed time for learning a tree: ", (stop_all - start_all) / num_of_trees, " Sec")
 
+            std = np.std(durations)
+
+            print('Std. of elapsed time for learning a tree', std)
+
+            file.write('Std. of elapsed time for learning a tree : {}\n'.format(std))
+
             file.write("Average elapsed time for learning a tree: {} Sec\n".format(str(stop_all - start_all)))
+
+            file.write("=======================================NEXT DATASET========================================\n")
 
         return tree_group
 

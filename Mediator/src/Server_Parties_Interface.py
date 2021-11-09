@@ -11,6 +11,7 @@ class Interface:
         self.socket_list = socket_list
         self.HEADER_LENGTH = 10
 
+
     # Functions working with instantiated objects from party class
     def aggregator(self, node_id, branch, num_target_classes, num_criteria):
         """aggregates the results from all parties for desired criterion
