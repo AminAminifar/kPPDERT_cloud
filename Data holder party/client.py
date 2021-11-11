@@ -6,7 +6,7 @@ import numpy as np
 import sys
 
 HEADER_LENGTH = 10
-IP = socket.gethostname() #"13.53.90.238"  # socket.gethostname()
+IP = "13.53.90.238"  # socket.gethostname()
 PORT = 12345
 client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 client_socket.connect((IP, PORT))
