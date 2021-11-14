@@ -54,7 +54,7 @@ class server:
 
             print("Average elapsed time for learning a tree: ", (stop_all - start_all) / num_of_trees, " Sec")
 
-            file.write("Average elapsed time for learning a tree: {} Sec\n".format(str(stop_all - start_all)))
+            file.write("Average elapsed time for learning a tree: {} Sec\n".format(str((stop_all - start_all) / num_of_trees)))
 
         return tree_group
 
