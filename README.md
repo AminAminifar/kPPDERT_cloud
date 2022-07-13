@@ -8,3 +8,5 @@ For the mediator, the server.py in the Mediator folder should be run. The number
 Related article:
 A. Aminifar, M. Shokri, F. Rabbi, V. K. I. Pun and Y. Lamo, "Extremely Randomized Trees With Privacy Preservation for Distributed Structured Health Data," in IEEE Access, vol. 10, pp. 6010-6027, 2022, doi: 10.1109/ACCESS.2022.3141709.
 https://ieeexplore.ieee.org/abstract/document/9676691
+
+Video: https://youtu.be/DXpXzp9nnf4
