@@ -1,4 +1,4 @@
-# k-PPD-ERT: Extremely Randomized Trees With Privacy Preservation for Distributed Structured Health Data
+# Extremely Randomized Trees With Privacy Preservation for Distributed Structured Health Data
 
 <div align="center">
   <img src="./img/main.png" alt="Fed-eGlass" width="500">
