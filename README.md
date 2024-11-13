@@ -14,3 +14,16 @@ A. Aminifar, M. Shokri, F. Rabbi, V. K. I. Pun and Y. Lamo, "Extremely Randomize
 https://ieeexplore.ieee.org/abstract/document/9676691
 
 Video: https://youtu.be/DXpXzp9nnf4
+
+## Citation
+```
+@article{aminifar2022extremely,
+  title={Extremely randomized trees with privacy preservation for distributed structured health data},
+  author={Aminifar, Amin and Shokri, Matin and Rabbi, Fazle and Pun, Violet Ka I and Lamo, Yngve},
+  journal={IEEE Access},
+  volume={10},
+  pages={6010--6027},
+  year={2022},
+  publisher={IEEE}
+}
+```
